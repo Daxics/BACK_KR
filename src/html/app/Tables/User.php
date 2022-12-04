@@ -1,11 +1,11 @@
 <?php
-require_once 'Base_API.php';
+namespace App\Tables;
 session_start();
 
-class User extends Base_API
+class User
 {
 
-    public function checkUser($connection, $data)
+    public static function checkUser($connection, $data)
     {
 
         $error_fields = [];
@@ -55,7 +55,7 @@ class User extends Base_API
     }
 
 
-    public function addUser($connection, $data)
+    public static function addUser($connection, $data)
     {
         $nickName = $data['nickName'];
         $e_mail = $data['e_mail'];

@@ -3655,3 +3655,253 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sun Dec 04 11:58:54.005978 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
 [Sun Dec 04 11:58:54.014955 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
 [Sun Dec 04 11:59:07.182390 2022] [php:warn] [pid 21] [client 172.29.0.5:36928] PHP Warning:  Undefined array key "q" in /var/www/html/index.php on line 6
+[Sun Dec 04 11:59:39.259206 2022] [php:warn] [pid 17] [client 172.29.0.5:57924] PHP Warning:  Undefined array key "q" in /var/www/html/index.php on line 6
+[Sun Dec 04 11:59:40.171164 2022] [php:warn] [pid 19] [client 172.29.0.5:57926] PHP Warning:  Undefined array key "q" in /var/www/html/index.php on line 6
+[Sun Dec 04 12:00:06.719700 2022] [php:warn] [pid 17] [client 172.29.0.5:33988] PHP Warning:  Undefined array key "q" in /var/www/html/index.php on line 6
+[Sun Dec 04 12:00:47.766497 2022] [php:warn] [pid 19] [client 172.29.0.5:58952] PHP Warning:  Undefined array key "q" in /var/www/html/index.php on line 6
+[Sun Dec 04 12:27:55.473753 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.29.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 12:28:04.429718 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 12:28:04.430261 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 12:28:04.431508 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 12:28:04.433030 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 12:28:04.434388 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 12:28:04.443014 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 12:28:04.444100 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 12:28:04.444478 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 12:28:04.449776 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 12:28:04.450458 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 12:28:04.454080 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 12:28:04.450924 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 12:28:04.455089 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 12:28:04.455384 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 12:28:04.461457 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 12:28:04.462215 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 12:28:04.462823 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 13:38:14.899053 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Sun Dec 04 13:38:14.900103 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 13:38:14.900850 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 13:43:41.668581 2022] [php:warn] [pid 19] [client 172.29.0.5:56028] PHP Warning:  require_once(views/components/navbar.php): Failed to open stream: No such file or directory in /var/www/html/app/Services/Page.php on line 8, referer: http://localhost:8080/
+[Sun Dec 04 13:43:41.669222 2022] [php:error] [pid 19] [client 172.29.0.5:56028] PHP Fatal error:  Uncaught Error: Failed opening required 'views/components/navbar.php' (include_path='.:/usr/local/lib/php') in /var/www/html/app/Services/Page.php:8\nStack trace:\n#0 /var/www/html/views/pages/singIN.php(19): App\\Services\\Page::part('navbar')\n#1 /var/www/html/app/Services/Router.php(20): require_once('/var/www/html/v...')\n#2 /var/www/html/routes/routes.php(9): App\\Services\\Router::enable()\n#3 /var/www/html/index.php(4): require_once('/var/www/html/r...')\n#4 {main}\n  thrown in /var/www/html/app/Services/Page.php on line 8, referer: http://localhost:8080/
+[Sun Dec 04 13:45:31.867286 2022] [php:warn] [pid 18] [client 172.29.0.5:37274] PHP Warning:  require_once(views/components/navbar.php.php): Failed to open stream: No such file or directory in /var/www/html/app/Services/Page.php on line 8, referer: http://localhost:8080/
+[Sun Dec 04 13:45:31.868237 2022] [php:error] [pid 18] [client 172.29.0.5:37274] PHP Fatal error:  Uncaught Error: Failed opening required 'views/components/navbar.php.php' (include_path='.:/usr/local/lib/php') in /var/www/html/app/Services/Page.php:8\nStack trace:\n#0 /var/www/html/views/pages/singIN.php(19): App\\Services\\Page::part('navbar.php')\n#1 /var/www/html/app/Services/Router.php(20): require_once('/var/www/html/v...')\n#2 /var/www/html/routes/routes.php(9): App\\Services\\Router::enable()\n#3 /var/www/html/index.php(4): require_once('/var/www/html/r...')\n#4 {main}\n  thrown in /var/www/html/app/Services/Page.php on line 8, referer: http://localhost:8080/
+[Sun Dec 04 13:59:17.234257 2022] [php:warn] [pid 18] [client 172.29.0.5:36292] PHP Warning:  Undefined array key "q" in /var/www/html/app/Services/Router.php on line 17, referer: http://localhost:8080/index.html
+[Sun Dec 04 14:45:32.588151 2022] [php:warn] [pid 17] [client 172.29.0.5:48604] PHP Warning:  Undefined array key "q" in /var/www/html/app/Services/Router.php on line 17, referer: http://localhost:8080/index.html
+[Sun Dec 04 16:05:32.429820 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.30.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 16:05:46.258114 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 16:05:46.259118 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 16:05:46.264692 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:05:46.273721 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:05:46.265027 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:05:46.274785 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:05:46.265214 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:05:46.275679 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:05:46.265371 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:05:46.278429 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:05:46.266245 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:05:46.274223 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:05:46.275213 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:05:46.277613 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:05:46.278965 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:05:46.289365 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:05:46.293370 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:05:48.551367 2022] [php:notice] [pid 20] [client 172.30.0.5:53730] PHP Notice:  Unknown: session.gc_maxlifetime is &lt;= 0, defaulting to 1440 seconds in Unknown on line 0, referer: http://localhost:8080/singUP.php
+[Sun Dec 04 16:06:04.945293 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.31.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 16:06:23.075125 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 16:06:23.078265 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 16:06:23.075549 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:06:23.081309 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:06:23.080801 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:06:23.083720 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:06:23.080943 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:06:23.084611 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:06:23.081115 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:06:23.085528 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:06:23.083243 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:06:23.093354 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:06:23.093830 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:06:23.083308 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:06:23.084189 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:06:23.085012 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:06:23.092570 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:12:35.998043 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.31.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 16:12:55.834770 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:12:55.835758 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:12:55.836267 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:12:55.837275 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 16:12:55.837804 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 16:12:55.840383 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:12:55.840860 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:12:55.841328 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:12:55.841473 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:12:55.844003 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:12:55.844596 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:12:55.845706 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:12:55.846211 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:12:55.846529 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:12:55.848866 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:12:55.849527 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:12:55.850028 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:31:38.459289 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 16:32:02.198544 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:32:02.198971 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:32:02.199260 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 16:32:02.199280 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:32:02.199552 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 16:32:02.201051 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:32:02.201676 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:32:02.202144 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:32:02.204061 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:32:02.205510 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:32:02.206155 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:32:02.205944 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:32:02.207209 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:32:02.207659 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:32:02.208885 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:32:02.209324 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:32:02.209622 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:43:40.131148 2022] [php:error] [pid 18] [client 192.168.0.5:54146] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:44\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 44, referer: http://127.0.0.1:5500/
+[Sun Dec 04 16:43:43.329284 2022] [php:error] [pid 21] [client 192.168.0.5:41494] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:44\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 44, referer: http://127.0.0.1:5500/
+[Sun Dec 04 16:44:01.862466 2022] [php:error] [pid 17] [client 192.168.0.5:58282] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:44\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 44
+[Sun Dec 04 16:44:03.434557 2022] [php:error] [pid 19] [client 192.168.0.5:44680] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:44\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 44
+[Sun Dec 04 16:46:29.770759 2022] [php:error] [pid 20] [client 192.168.0.5:35398] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:48:04.903666 2022] [php:error] [pid 18] [client 192.168.0.5:33378] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:49:53.924992 2022] [php:error] [pid 21] [client 192.168.0.5:37840] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:49:55.067222 2022] [php:error] [pid 17] [client 192.168.0.5:37842] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:50:08.228510 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 16:50:21.576515 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 16:50:21.583448 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 16:50:21.577452 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:50:21.608773 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:50:21.580381 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:50:21.610953 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:50:21.612348 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:50:21.580547 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:50:21.614804 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:50:21.580817 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:50:21.619517 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:50:21.581097 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 16:50:21.610032 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:50:21.618681 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:50:21.621656 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:50:21.623102 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 16:50:21.637693 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 16:50:25.830752 2022] [php:error] [pid 17] [client 192.168.16.5:42114] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:50:27.125415 2022] [php:error] [pid 21] [client 192.168.16.5:42116] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:50:27.776004 2022] [php:error] [pid 19] [client 192.168.16.5:42118] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:50:28.224422 2022] [php:error] [pid 20] [client 192.168.16.5:42120] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:50:30.967844 2022] [php:error] [pid 18] [client 192.168.16.5:42122] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 16:56:05.358460 2022] [php:error] [pid 17] [client 192.168.16.5:42132] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:07:00.210410 2022] [php:error] [pid 21] [client 192.168.16.5:49306] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:08:16.467104 2022] [php:error] [pid 19] [client 192.168.16.5:59362] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:08:17.228781 2022] [php:error] [pid 20] [client 192.168.16.5:59364] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:08:17.651382 2022] [php:error] [pid 18] [client 192.168.16.5:59366] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:08:18.105052 2022] [php:error] [pid 17] [client 192.168.16.5:59368] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:08:18.508330 2022] [php:error] [pid 21] [client 192.168.16.5:59370] PHP Fatal error:  Uncaught Error: Class "Api\\Tables\\Post" not found in /var/www/html/api/index.php:52\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 52
+[Sun Dec 04 17:13:43.232883 2022] [php:error] [pid 19] [client 192.168.16.5:41918] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:44.507896 2022] [php:error] [pid 20] [client 192.168.16.5:41920] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:45.491689 2022] [php:error] [pid 18] [client 192.168.16.5:41922] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:46.069840 2022] [php:error] [pid 17] [client 192.168.16.5:41924] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:46.526070 2022] [php:error] [pid 21] [client 192.168.16.5:41926] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:46.847897 2022] [php:error] [pid 19] [client 192.168.16.5:41928] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:13:47.296138 2022] [php:error] [pid 20] [client 192.168.16.5:41930] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:14:46.298484 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.32.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 17:14:58.404520 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 17:14:58.405164 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:14:58.405645 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:14:58.406449 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 17:14:58.407424 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 17:14:58.410868 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 17:14:58.411478 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:14:58.410924 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 17:14:58.412398 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:14:58.411983 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:14:58.417328 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 17:14:58.427718 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:14:58.420521 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 17:14:58.429039 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:14:58.423112 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:14:58.428430 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:14:58.429958 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:15:39.757541 2022] [php:error] [pid 17] [client 192.168.32.5:41842] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Post" not found in /var/www/html/api/index.php:51\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 51
+[Sun Dec 04 17:17:30.814007 2022] [php:warn] [pid 18] [client 192.168.32.5:54024] PHP Warning:  require_once(/var/www/html/api../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/api/index.php on line 8
+[Sun Dec 04 17:17:30.814556 2022] [php:error] [pid 18] [client 192.168.32.5:54024] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/api../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/api/index.php:8\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 8
+[Sun Dec 04 17:18:13.048555 2022] [php:warn] [pid 21] [client 192.168.32.5:53898] PHP Warning:  require_once(/var/www/html/api../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/api/index.php on line 8
+[Sun Dec 04 17:18:13.049108 2022] [php:error] [pid 21] [client 192.168.32.5:53898] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/api../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/api/index.php:8\nStack trace:\n#0 {main}\n  thrown in /var/www/html/api/index.php on line 8
+[Sun Dec 04 17:18:57.746138 2022] [php:warn] [pid 20] [client 192.168.32.5:49772] PHP Warning:  move_uploaded_file(temp/__ivy_original_drawn_by_yoako__4bed6de0bcfc24b2fb030f83e7b8e7c7.png): Failed to open stream: No such file or directory in /var/www/html/app/Tables/Post.php on line 59
+[Sun Dec 04 17:18:57.746694 2022] [php:warn] [pid 20] [client 192.168.32.5:49772] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpRICWNG&quot; to &quot;temp/__ivy_original_drawn_by_yoako__4bed6de0bcfc24b2fb030f83e7b8e7c7.png&quot; in /var/www/html/app/Tables/Post.php on line 59
+[Sun Dec 04 17:20:40.823005 2022] [php:warn] [pid 17] [client 192.168.32.5:59934] PHP Warning:  move_uploaded_file(/var/www/html/app/Tables/temp/__ivy_original_drawn_by_yoako__4bed6de0bcfc24b2fb030f83e7b8e7c7.png): Failed to open stream: No such file or directory in /var/www/html/app/Tables/Post.php on line 59
+[Sun Dec 04 17:20:40.825149 2022] [php:warn] [pid 17] [client 192.168.32.5:59934] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpyaxGdv&quot; to &quot;/var/www/html/app/Tables/temp/__ivy_original_drawn_by_yoako__4bed6de0bcfc24b2fb030f83e7b8e7c7.png&quot; in /var/www/html/app/Tables/Post.php on line 59
+[Sun Dec 04 17:35:53.996623 2022] [php:error] [pid 20] [client 192.168.32.5:53130] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:15\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 15, referer: http://127.0.0.1:5500/
+[Sun Dec 04 17:36:15.051896 2022] [php:error] [pid 17] [client 192.168.32.5:51562] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:15\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 15, referer: http://127.0.0.1:5500/
+[Sun Dec 04 17:37:47.589768 2022] [php:error] [pid 19] [client 192.168.32.5:39280] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:15\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 15
+[Sun Dec 04 17:41:37.510727 2022] [php:error] [pid 20] [client 192.168.32.5:35262] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:15\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 15
+[Sun Dec 04 17:45:57.217778 2022] [php:warn] [pid 17] [client 192.168.32.5:38124] PHP Warning:  include_once(/var/www/html/app/TablesVendor/imgResize.php): Failed to open stream: No such file or directory in /var/www/html/app/Tables/Post.php on line 5
+[Sun Dec 04 17:45:57.218399 2022] [php:warn] [pid 17] [client 192.168.32.5:38124] PHP Warning:  include_once(): Failed opening '/var/www/html/app/TablesVendor/imgResize.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/html/app/Tables/Post.php on line 5
+[Sun Dec 04 17:45:57.220828 2022] [php:error] [pid 17] [client 192.168.32.5:38124] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:17\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 17
+[Sun Dec 04 17:46:10.141270 2022] [php:error] [pid 18] [client 192.168.32.5:55688] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\imgResize" not found in /var/www/html/app/Tables/Post.php:17\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 17
+[Sun Dec 04 17:48:22.507433 2022] [dbd:error] [pid 40] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Sun Dec 04 17:48:22.507955 2022] [dbd:error] [pid 40] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 17:48:22.508384 2022] [dbd:crit] [pid 40] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 17:48:22.527870 2022] [php:error] [pid 21] [client 192.168.32.5:39928] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/imgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\imgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/imgResize.php on line 15
+[Sun Dec 04 17:49:07.329017 2022] [php:error] [pid 19] [client 192.168.32.5:33236] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\App\\Tables\\Vendor\\imgResize" not found in /var/www/html/app/Tables/Post.php:17\nStack trace:\n#0 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#1 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 17
+[Sun Dec 04 17:49:17.681015 2022] [php:error] [pid 20] [client 192.168.32.5:37368] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/imgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\imgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/imgResize.php on line 15
+[Sun Dec 04 17:49:32.004383 2022] [php:error] [pid 17] [client 192.168.32.5:37702] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/imgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\imgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/imgResize.php on line 15
+[Sun Dec 04 17:51:09.785440 2022] [php:error] [pid 18] [client 192.168.32.5:52340] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/ImgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\ImgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/ImgResize.php on line 15
+[Sun Dec 04 17:51:57.228005 2022] [php:error] [pid 40] [client 192.168.32.5:55012] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/ImgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\ImgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/ImgResize.php on line 15
+[Sun Dec 04 18:07:54.219560 2022] [php:error] [pid 21] [client 192.168.32.5:40436] PHP Fatal error:  Uncaught Error: Class "App\\Tables\\Vendor\\Exception" not found in /var/www/html/app/Tables/Vendor/ImgResize.php:15\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(17): App\\Tables\\Vendor\\ImgResize->__construct('../download/__i...')\n#1 /var/www/html/api/index.php(45): App\\Tables\\Post::getPosts(Object(mysqli))\n#2 {main}\n  thrown in /var/www/html/app/Tables/Vendor/ImgResize.php on line 15, referer: http://127.0.0.1:5500/
+[Sun Dec 04 18:23:07.281979 2022] [php:warn] [pid 18] [client 192.168.32.5:50140] PHP Warning:  mkdir(): Permission denied in /var/www/html/app/Tables/Post.php on line 61
+[Sun Dec 04 18:23:07.282598 2022] [php:warn] [pid 18] [client 192.168.32.5:50140] PHP Warning:  move_uploaded_file(/download/1670178187.png): Failed to open stream: No such file or directory in /var/www/html/app/Tables/Post.php on line 67
+[Sun Dec 04 18:23:07.283115 2022] [php:warn] [pid 18] [client 192.168.32.5:50140] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpS7cEwx&quot; to &quot;/download/1670178187.png&quot; in /var/www/html/app/Tables/Post.php on line 67
+[Sun Dec 04 18:36:53.415360 2022] [php:error] [pid 18] [client 192.168.32.5:44338] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'img_name' in 'field list' in /var/www/html/app/Tables/Post.php:70\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(70): mysqli->query('INSERT INTO `po...')\n#1 /var/www/html/api/index.php(53): App\\Tables\\Post::addPost(Object(mysqli), Array, Array)\n#2 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 70
+[Sun Dec 04 18:37:07.415462 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.48.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 18:37:22.219228 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 18:37:22.221701 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:37:22.221868 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:37:22.222027 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:37:22.306046 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:37:22.222163 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:37:22.234856 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:37:22.241212 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 18:37:22.286001 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:37:22.309651 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:37:22.305189 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:37:22.311227 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:37:22.306768 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:37:22.307749 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:37:22.308549 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:37:22.326135 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:37:22.331605 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:37:55.196182 2022] [php:error] [pid 20] [client 192.168.48.5:46918] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'img_name' in 'field list' in /var/www/html/app/Tables/Post.php:70\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(70): mysqli->query('INSERT INTO `po...')\n#1 /var/www/html/api/index.php(53): App\\Tables\\Post::addPost(Object(mysqli), Array, Array)\n#2 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 70
+[Sun Dec 04 18:38:01.568561 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.80.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 04 18:38:17.058289 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:38:17.059252 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:38:17.058383 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Sun Dec 04 18:38:17.059833 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Dec 04 18:38:17.059519 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:38:17.061466 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:38:17.062001 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:38:17.062304 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:38:17.065180 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:38:17.066499 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:38:17.065692 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:38:17.065940 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Sun Dec 04 18:38:17.067056 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:38:17.067725 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:38:17.068124 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:38:17.069499 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:38:17.069040 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:39:04.115364 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Sun Dec 04 18:39:04.118312 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:39:04.122912 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Sun Dec 04 18:39:31.190617 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Sun Dec 04 18:39:31.203742 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Sun Dec 04 18:39:31.219702 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!

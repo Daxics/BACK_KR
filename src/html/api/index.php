@@ -1,10 +1,21 @@
 <?php
+
+$connect = new mysqli("db", "user", "password", "appDB");
+if(mysqli_connect_errno()) {
+    throw new Exception("Couldn't connect to database.");
+}
+
+require_once "../vendor/autoload.php";
+
+use App\Tables\Base_API;
+use App\Tables\Post;
+use App\Tables\User;
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json; charset=UTF-8");
-require 'requires.php';
 
 $q = $_GET['q'];
 $params = explode('/', $q);
@@ -25,15 +36,13 @@ switch ($method) {
                 case 'user':
                     break;
                 case 'post':
-                    $post = new Post;
-                    $post->getPost($connect, $id);
+                    Post::getPost($connect, $id);
                     break;
             }
         } else {
             switch ($type) {
                 case 'posts':
-                    $content = new Post;
-                    $content->getPosts($connect);
+                    Post::getPosts($connect);
                     break;
             }
         }
@@ -41,16 +50,13 @@ switch ($method) {
     case 'POST':
         switch ($type){
             case 'postAdd':
-                $post = new Post;
-                $post->addPost($connect, $_POST, $_FILES);
+                Post::addPost($connect, $_POST, $_FILES);
                 break;
             case 'userAdd':
-                $user = new User;
-                $user->addUser($connect, $_POST);
+                User::addUser($connect, $_POST);
                 break;
             case 'userCheck':
-                $user = new User;
-                $user->checkUser($connect, $_POST);
+                User::checkUser($connect, $_POST);
                 break;
         }
         break;
@@ -68,8 +74,7 @@ switch ($method) {
             case 'user':
                 break;
             case 'post':
-                $post = new Post;
-                $post->delPost($connect, $id);
+                Post::delPost($connect, $id);
                 break;
         }
         break;

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit794f0e8949f093ba1864a71ff9912325
+class ComposerStaticInit13bab6378a43407d10d0d7c2245556e0
 {
     public static $prefixLengthsPsr4 = array (
         'A' => 
@@ -21,15 +21,24 @@ class ComposerStaticInit794f0e8949f093ba1864a71ff9912325
     );
 
     public static $classMap = array (
+        'App\\Services\\Page' => __DIR__ . '/../..' . '/app/Services/Page.php',
+        'App\\Services\\Router' => __DIR__ . '/../..' . '/app/Services/Router.php',
+        'App\\Tables\\Author' => __DIR__ . '/../..' . '/app/Tables/Author.php',
+        'App\\Tables\\Base_API' => __DIR__ . '/../..' . '/app/Tables/Base_API.php',
+        'App\\Tables\\Comment' => __DIR__ . '/../..' . '/app/Tables/Comment.php',
+        'App\\Tables\\Post' => __DIR__ . '/../..' . '/app/Tables/Post.php',
+        'App\\Tables\\Role' => __DIR__ . '/../..' . '/app/Tables/Role.php',
+        'App\\Tables\\Tag' => __DIR__ . '/../..' . '/app/Tables/Tag.php',
+        'App\\Tables\\User' => __DIR__ . '/../..' . '/app/Tables/User.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit794f0e8949f093ba1864a71ff9912325::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit794f0e8949f093ba1864a71ff9912325::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit794f0e8949f093ba1864a71ff9912325::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit13bab6378a43407d10d0d7c2245556e0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit13bab6378a43407d10d0d7c2245556e0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit13bab6378a43407d10d0d7c2245556e0::$classMap;
 
         }, null, ClassLoader::class);
     }

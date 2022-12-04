@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
 	`source` VARCHAR(200),
 	`disc` VARCHAR(200),
 	`dateTime` DATETIME,
-    `img_type` VARCHAR(20),
-    `img` LONGBLOB,
+    `img_name` VARCHAR(20),
+    `img` VARCHAR(200),
 	PRIMARY KEY (`id_post`)
 );
 
@@ -151,7 +151,7 @@ INSERT INTO `roles` (`id_role`,`rule`) VALUES
 
 INSERT INTO `users` (`id_user`,`id_role`,`nickName`,`e-mail`,`password`) VALUES
     (NULL,1,'Pisun','pisun@mail.cum','$apr1$g/9PpRf1$Tl9zPvUnToKdiGt8hRap//');
-INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`dateTime`,`img_type`,`img`) VALUES
+INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`dateTime`,`img_name`,`img`) VALUES
     (NULL,1,NULL,'sex instructor',NULL,NULL,NULL);
 INSERT INTO `comments` (`id_comment`,`id_post`,`id_user`,`text`,`dateTime`) VALUES
     (NULL,1,1,'Yasosu bibu',NULL);

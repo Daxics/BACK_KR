@@ -20,7 +20,7 @@ $('.btn-reg').click(function (e) {
         },
         success(data) {
             if (data.status) {
-                document.location.href = '../auto.html';
+                document.location.href = '/singIN.php';
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

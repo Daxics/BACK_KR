@@ -18,7 +18,12 @@ class Router
         foreach (self::$list as $route){
             if ($route["uri"] === '/'. $query) {
                 require_once "views/pages/" . $route['page'];
+                die();
             }
         }
+        self::not_found_page();
+    }
+    private static function not_found_page(){
+        require_once "views/errors/404.php";
     }
 }
