@@ -113,12 +113,12 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 ALTER TABLE `users` ADD FOREIGN KEY (id_role) REFERENCES `roles` (`id_role`);
 ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`);
-ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`);
+ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`);
-ALTER TABLE `post_tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`);
-ALTER TABLE `post_tags` ADD FOREIGN KEY (id_tag) REFERENCES `tags` (`id_tag`);
-ALTER TABLE `post_authors` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`);
-ALTER TABLE `post_authors` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author`);
+ALTER TABLE `post_tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
+ALTER TABLE `post_tags` ADD FOREIGN KEY (id_tag) REFERENCES `tags` (`id_tag`) ON DELETE CASCADE;
+ALTER TABLE `post_authors` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
+ALTER TABLE `post_authors` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author`) ON DELETE CASCADE;
 
 -- -- ---
 -- -- Table Properties

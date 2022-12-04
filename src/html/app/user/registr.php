@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!empty($_SESSION['user'])) {
+    header('Location: ../index.html');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,44 +24,43 @@
 <body>
 
 
-<form onsubmit="return false" class="position-absolute top-50 start-50
-            translate-middle border border-2 rounded p-3 js-form"
-      id="prospects_form">
+<form class="position-absolute top-50 start-50
+            translate-middle border border-2 rounded p-3 js-form">
+
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <label class="form-label">Username</label>
         <input type="text" class="form-control js-input"
                name="nickName">
     </div>
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control js-input" name="e-mail">
-        <div id="emailHelp" class="form-text">We'll never share your
-            email with anyone else.</div>
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control js-input"
+               name="e_mail">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <label class="form-label">Password</label>
         <input type="password" class="form-control js-input"
                name="password">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Confirm
+        <label class="form-label">Confirm
             your password</label>
         <input type="password" class="form-control js-input"
-               name="password-ex">
-        <div id="passHelp" class="form-text text-danger"></div>
+               name="password_con">
     </div>
     <div class="d-grid gap-2 col-8 mx-auto">
-        <button type="submit" class="btn btn-primary btn-lg"
-                onclick="sex()">Register</button>
+        <div class="form-text text-danger msg d-none"></div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-reg">Register</button>
         <div class="text-center">
-             <a href="index.php" class="text-decoration-none">Login</a>
+            <a href="index.php" class="text-decoration-none">Login</a>
         </div>
     </div>
 
 </form>
 
-
-<script src="JS/register.js"></script>
+<script src="JS/jquery-3.6.1.min.js"></script>
+<script src="JS/singUP.js"></script>
 </body>
 
 </html>

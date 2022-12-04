@@ -5,58 +5,124 @@ session_start();
 class User extends Base_API
 {
 
-    public function checkUser($connection, $data){
+    public function checkUser($connection, $data)
+    {
 
-        if (empty($data['nickName']) || empty($data['password'])) {
-            http_response_code(400);
-            $res = [
-                "status" => false,
-                "message" => 'Some data is not filled',
-                "data" => $data
-            ];
-        } else {
-            $nickName = $data['nickName'];
-            $password = $data['password'];
-            $password = md5($password);
-            $check_user = $connection->query("SELECT * FROM `users` WHERE `login` = '$nickName' AND `password` = '$password'");
-            if (mysqli_num_rows($check_user) > 0) {
-                $user = mysqli_fetch_assoc($check_user);
-                $_SESSION['user'] = [
-                    "id" => $user['id_user']
-            ];
-            }
-            http_response_code(201);
-            $res = [
-                "status" => true,
-                "post_id" => mysqli_insert_id($connection)
-            ];
+        $error_fields = [];
+        $nickName = $data['nickName'];
+        $password = $data['password'];
+
+        if ($nickName === '') {
+            $error_fields[] = 'nickName';
         }
-        echo json_encode($res);
+
+        if ($password === '') {
+            $error_fields[] = 'password';
+        }
+
+        if (!empty($error_fields)) {
+            $response = [
+                "status" => false,
+                "type" => 1,
+                "message" => "Проверьте правильность полей",
+                "fields" => $error_fields
+            ];
+
+            echo json_encode($response);
+
+            die();
+        }
+        $password = md5($password);
+        $check_user = $connection->query("SELECT * FROM `users` WHERE `nickName` = '$nickName' AND `password` = '$password'");
+        if (mysqli_num_rows($check_user) > 0) {
+            $user = mysqli_fetch_assoc($check_user);
+            $_SESSION['user'] = [
+                "id_user" => $user['id_user'],
+                "id_role" => $user['id_role']
+            ];
+            $response = [
+                "status" => true
+            ];
+
+        } else {
+            $response = [
+                "status" => false,
+                "message" => 'Не верный логин или пароль'
+            ];
+
+        }
+        echo json_encode($response);
     }
 
 
     public function addUser($connection, $data)
     {
-        if (empty($data['nickName']) || empty($data['e_mail']) || empty($data['password'])) {
-            http_response_code(400);
-            $res = [
+        $nickName = $data['nickName'];
+        $e_mail = $data['e_mail'];
+        $password = $data['password'];
+        $password_con = $data['password_con'];
+        $check_login = $connection->query("SELECT * FROM `users` WHERE `nickName` = '$nickName'");
+        if (mysqli_num_rows($check_login) > 0) {
+            $response = [
                 "status" => false,
-                "message" => 'Some data is not filled',
-                "data" => $data
+                "type" => 1,
+                "message" => "Такой логин уже существует",
+                "fields" => ['login']
             ];
-        } else {
-            $nickName = $data['nickName'];
-            $e_mail = $data['e_mail'];
-            $password = $data['password'];
+
+            echo json_encode($response);
+            die();
+        }
+
+        $error_fields = [];
+
+        if ($nickName === '') {
+            $error_fields[] = 'nickName';
+        }
+
+        if ($password === '') {
+            $error_fields[] = 'password';
+        }
+
+
+        if ($e_mail === '' || !filter_var($e_mail, FILTER_VALIDATE_EMAIL)) {
+            $error_fields[] = 'e_mail';
+        }
+
+        if ($password_con === '') {
+            $error_fields[] = 'password_con';
+        }
+
+
+        if (!empty($error_fields)) {
+            $response = [
+                "status" => false,
+                "type" => 1,
+                "message" => "Проверьте правильность полей",
+                "fields" => $error_fields
+            ];
+
+            echo json_encode($response);
+
+            die();
+        }
+
+
+        if ($password === $password_con) {
             $password = md5($password);
             $connection->query("INSERT INTO `users` (`id_user`,`nickName`,`e-mail`,`password`) VALUES
                                 (NULL,'$nickName','$e_mail','$password');");
             http_response_code(201);
-            $res = [
+            $response = [
                 "status" => true,
-                "post_id" => mysqli_insert_id($connection)
+                "message" => "Регистрация прошла успешно!",
+            ];
+        } else {
+            $response = [
+                "status" => false,
+                "message" => "Пароли не совпадают",
             ];
         }
-        echo json_encode($res);
+        echo json_encode($response);
     }
 }

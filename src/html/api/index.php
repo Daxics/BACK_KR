@@ -22,27 +22,35 @@ switch ($method) {
     case 'GET':
         if (isset($id)) {
             switch ($type) {
-                case 'users':
+                case 'user':
                     break;
-                case 'posts':
+                case 'post':
                     $post = new Post;
                     $post->getPost($connect, $id);
                     break;
             }
         } else {
-            $content = new Base_API;
-            $content->getAllOut($connect, $type);
+            switch ($type) {
+                case 'posts':
+                    $content = new Post;
+                    $content->getPosts($connect);
+                    break;
+            }
         }
         break;
     case 'POST':
         switch ($type){
-            case 'posts':
+            case 'postAdd':
                 $post = new Post;
                 $post->addPost($connect, $_POST, $_FILES);
                 break;
-            case 'users':
+            case 'userAdd':
                 $user = new User;
                 $user->addUser($connect, $_POST);
+                break;
+            case 'userCheck':
+                $user = new User;
+                $user->checkUser($connect, $_POST);
                 break;
         }
         break;
@@ -57,9 +65,9 @@ switch ($method) {
         break;
     case 'DELETE':
         switch ($type) {
-            case 'users':
+            case 'user':
                 break;
-            case 'posts':
+            case 'post':
                 $post = new Post;
                 $post->delPost($connect, $id);
                 break;

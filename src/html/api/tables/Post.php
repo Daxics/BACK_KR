@@ -1,8 +1,34 @@
 <?php
 require_once 'Base_API.php';
+require_once 'Vendor/imgResize.php';
 
 class Post extends Base_API
 {
+
+    public function getPosts($connection)
+    {
+        $posts = $connection->query("SELECT * FROM `posts` ORDER BY `id_post` DESC");
+        $postsList = [];
+        while ($post = mysqli_fetch_assoc($posts)) {
+            if (isset($post['img'])){
+//                    try {
+////                    $image = new imgResize($post['img']);
+////                    $image->resize(206, 0);
+////                    $post['img'] = $image->getImg();
+////                list($widh, $height, $type)=getimagesizefromstring($post['img']);
+////
+////                    echo $widh, '      ', $height, '       ', $type, '     ';
+//                } catch (Exception $error)   {
+//                    echo $error;
+//                }
+                $post['img'] = base64_encode($post['img']);
+            }
+            $postsList[] = $post;
+        }
+        echo json_encode($postsList);
+    }
+
+
     public function getPost($connection, $id)
     {
         $post = $connection->query("SELECT * FROM `posts` WHERE `id_post` = '$id'");
@@ -56,7 +82,6 @@ class Post extends Base_API
             "message" => 'Order is deleted',
             "orderID" => $id
         ];
-
         echo json_encode($res);
     }
 }

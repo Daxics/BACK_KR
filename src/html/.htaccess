@@ -1,4 +1,4 @@
 RewriteEngine On
-php_value memory_limit 200M
 RewriteCond %{REQUEST_FILENAME} !-f
+AddDefaultCharset UTF-8
 RewriteRule ^(.+)$ ./index.php?q=$1 [L,QSA]
