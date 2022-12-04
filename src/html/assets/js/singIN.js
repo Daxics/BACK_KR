@@ -16,7 +16,7 @@ $('.btn-log').click(function (e) {
         },
         success(data) {
             if (data.status) {
-                document.location.href = '/index.html';
+                document.location.href = '/posts.php';
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

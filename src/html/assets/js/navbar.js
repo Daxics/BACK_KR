@@ -1,9 +1,8 @@
 const pathname = window.location.pathname;
 
-console.log(pathname);
-
 $('.navbar-nav .nav-link').each(function () {
-    if ($(this).attr('href') === pathname) {
+    if ($(this).attr('href').split("?")[0] === pathname) {
         $(this).addClass("text-primary");
+            // $(this).addClass("active");
     }
 });

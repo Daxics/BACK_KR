@@ -1,0 +1,30 @@
+<?php
+session_start();
+
+use App\Services\Page;
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<?php Page::part('head'); ?>
+
+<body class="container-fluid p-3 px-5">
+
+<?php
+if (!empty($_SESSION['user'])) {
+    Page::part('navbarUser');
+} else{
+    Page::part('navbar');
+}
+?>
+
+
+
+<?php Page::part('scripts'); ?>
+<script src="/assets/js/profile.js"></script>
+</body>
+
+</html>

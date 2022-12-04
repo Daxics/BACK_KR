@@ -74,10 +74,10 @@ class Post
     {
         $id = intval($id);
 
-        $result = $connection->query("SELECT name FROM `posts` WHERE `posts`.`id_post` = '$id'");
+        $result = $connection->query("SELECT img_name FROM `posts` WHERE `posts`.`id_post` = '$id'");
         $result = mysqli_fetch_assoc($result);
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/download/' . $result['img_name'])){
-            unlink($_SERVER['DOCUMENT_ROOT'] . '/download/' . $result['img_name']);
+        if (file_exists('download/' . $result['img_name'])){
+            unlink('download/' . $result['img_name']);
         };
 
         $connection->query("DELETE FROM `posts` WHERE `posts`.`id_post` = '$id'");

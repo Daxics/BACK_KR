@@ -2,7 +2,7 @@
 session_start();
 
 if (!empty($_SESSION['user'])) {
-    header('Location: /index.php');
+    header('Location: /posts.php');
 }
 
 use App\Services\Page;
@@ -14,7 +14,7 @@ use App\Services\Page;
 
 <?php Page::part('head'); ?>
 
-<body class="container-fluid p-3">
+<body class="container-fluid p-3 px-5">
 
 <?php Page::part('navbar'); ?>
 
