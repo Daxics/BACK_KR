@@ -43,7 +43,7 @@ use App\Services\Page;
                name="password_con">
     </div>
     <div class="d-grid gap-2 col-8 mx-auto">
-        <div class="form-text text-danger msg d-none"></div>
+        <div class="form-text text-danger msg d-none text-center"></div>
         <button type="submit" class="btn btn-primary btn-lg btn-reg mt-2 mb-2">Register</button>
     </div>
 

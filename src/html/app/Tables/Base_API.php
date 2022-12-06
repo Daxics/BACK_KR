@@ -4,17 +4,21 @@ namespace App\Tables;
 
 class Base_API
 {
-    public function getAllOut($connection, $table)
+    public static function getAllOut($connection, $table)
     {
         $posts = $connection->query("SELECT * FROM $table");
         $postsList = [];
         while ($post = mysqli_fetch_assoc($posts)) {
-            if (isset($post['img'])){
-                $post['img'] = base64_encode($post['img']);
-            }
             $postsList[] = $post;
         }
         echo json_encode($postsList);
     }
+
+    public static function getCount($connection, $table){
+        $res = $connection->query("SELECT COUNT(*) FROM $table");
+        $res = mysqli_fetch_assoc($res);
+        echo json_encode($res);
+    }
+
 
 }

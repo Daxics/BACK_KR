@@ -4,6 +4,26 @@ session_start();
 
 class User
 {
+    public static function getUser($connection, $id)
+    {
+
+        $req = "SELECT users.id_user, COUNT(*) AS ".'count_posts'.",  nickName, e_mail, role FROM users 
+                INNER JOIN roles ON users.id_role = roles.id_role
+                INNER JOIN posts ON posts.id_user = posts.id_user
+                GROUP BY users.id_user;";
+        $post = $connection->query($req);
+        if (mysqli_num_rows($post) === 0) {
+            http_response_code(404);
+            $res = [
+                "status" => false,
+                "massage" => "Post not found"
+            ];
+            echo json_encode($res);
+        } else {
+            $post = mysqli_fetch_assoc($post);
+            echo json_encode($post);
+        }
+    }
 
     public static function checkUser($connection, $data)
     {
@@ -53,7 +73,6 @@ class User
         }
         echo json_encode($response);
     }
-
 
     public static function addUser($connection, $data)
     {
@@ -110,7 +129,7 @@ class User
 
         if ($password === $password_con) {
             $password = md5($password);
-            $connection->query("INSERT INTO `users` (`id_user`,`nickName`,`e-mail`,`password`) VALUES
+            $connection->query("INSERT INTO `users` (`id_user`,`nickName`,`e_mail`,`password`) VALUES
                                 (NULL,'$nickName','$e_mail','$password');");
             http_response_code(201);
             $response = [

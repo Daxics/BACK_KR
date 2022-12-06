@@ -1,4 +1,5 @@
 const pathname = window.location.pathname;
+console.log('sex');
 
 $('.navbar-nav .nav-link').each(function () {
     if ($(this).attr('href').split("?")[0] === pathname) {
@@ -6,3 +7,4 @@ $('.navbar-nav .nav-link').each(function () {
             // $(this).addClass("active");
     }
 });
+

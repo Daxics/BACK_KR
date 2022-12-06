@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+$page = $_GET['page'] ?? 1;
+$request = $_GET['r'] ?? 0; //request
+
 use App\Services\Page;
 
 ?>
@@ -11,7 +14,7 @@ use App\Services\Page;
 
 <?php Page::part('head'); ?>
 
-<body class="container-fluid p-3 px-5">
+<body class="container-fluid p-3 px-5" id="<?=$request?>">
 
 <?php
 if (!empty($_SESSION['user'])) {
@@ -22,6 +25,8 @@ if (!empty($_SESSION['user'])) {
 }
 ?>
 
+
+
 <div class="d-flex p-4 g-4">
     <div class=" d-flex flex-column align-self-start mt-2" style="min-width: 10rem;">
         <div class="ps-3">.col-6 .col-sm-3</div>
@@ -31,10 +36,12 @@ if (!empty($_SESSION['user'])) {
         <div class="ps-3">.col-6 .col-sm-3</div>
 
     </div>
-    <div class="d-flex flex-wrap posts-list"></div>
+    <div class=" d-flex flex-column">
+        <div class="d-flex flex-wrap posts-list" id="<?=$page?>"></div>
+        <?php Page::part('pagination'); ?>
+    </div>
 </div>
 
-<!--    col-sm-2-->
 
 
 <?php Page::part('scripts'); ?>

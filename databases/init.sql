@@ -16,9 +16,10 @@ CREATE TABLE  IF NOT EXISTS `users` (
 	`id_user` INTEGER(10) AUTO_INCREMENT NOT NULL,
 	`id_role` INTEGER(3) DEFAULT '1',
 	`nickName` VARCHAR(100),
-	`e-mail` VARCHAR(255),
+	`e_mail` VARCHAR(255),
 	`password` VARCHAR(200),
-	PRIMARY KEY (`id_user`)
+    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_user`)
 );
 
 
@@ -44,10 +45,10 @@ CREATE TABLE IF NOT EXISTS `posts` (
 	`id_user` INTEGER(20),
 	`source` VARCHAR(200),
 	`disc` VARCHAR(200),
-	`dateTime` DATETIME,
     `img_name` VARCHAR(20),
     `img` VARCHAR(200),
-	PRIMARY KEY (`id_post`)
+    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_post`)
 );
 
 -- ---
@@ -60,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 	`id_post` INTEGER(20),
 	`id_user` INTEGER(20),
 	`text` VARCHAR(200),
-	`dateTime` DATETIME,
+	`dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id_comment`)
 );
 
@@ -102,8 +103,7 @@ CREATE TABLE IF NOT EXISTS `post_authors` (
 
 CREATE TABLE IF NOT EXISTS `roles` (
 	`id_role` INTEGER(20) AUTO_INCREMENT NOT NULL,
-	`rule` VARCHAR(10),
-	`count` INTEGER(10),
+	`role` VARCHAR(10),
 	PRIMARY KEY (`id_role`)
 );
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- ---
 
 ALTER TABLE `users` ADD FOREIGN KEY (id_role) REFERENCES `roles` (`id_role`);
-ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`);
+ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`);
 ALTER TABLE `post_tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
@@ -145,16 +145,18 @@ INSERT INTO `authors` (`id_author`,`author`) VALUES
     (NULL,'Yang Do');
 INSERT INTO `tags` (`id_tag`,`regularTag`) VALUES
     (NULL,'Пейзаж');
-INSERT INTO `roles` (`id_role`,`rule`) VALUES
+INSERT INTO `roles` (`id_role`,`role`) VALUES
     (NULL,'RegUser');
 
 
-INSERT INTO `users` (`id_user`,`id_role`,`nickName`,`e-mail`,`password`) VALUES
+INSERT INTO `users` (`id_user`,`id_role`,`nickName`,`e_mail`,`password`) VALUES
     (NULL,1,'Pisun','pisun@mail.cum','$apr1$g/9PpRf1$Tl9zPvUnToKdiGt8hRap//');
-INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`dateTime`,`img_name`,`img`) VALUES
-    (NULL,1,NULL,'sex instructor',NULL,NULL,NULL);
-INSERT INTO `comments` (`id_comment`,`id_post`,`id_user`,`text`,`dateTime`) VALUES
-    (NULL,1,1,'Yasosu bibu',NULL);
+INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
+    (NULL,1,NULL,'sex instructor',NULL,NULL);
+
+
+INSERT INTO `comments` (`id_comment`,`id_post`,`id_user`,`text`) VALUES
+    (NULL,1,1,'Yasosu bibu');
 
 INSERT INTO `post_tags` (`id_post`,`id_tag`) VALUES
     (1,1);

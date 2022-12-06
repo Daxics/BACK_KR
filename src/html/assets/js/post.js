@@ -1,6 +1,5 @@
 $(document).ready(function () {
     let id = $('.post').attr('id');
-    console.log(id);
     $.getJSON(
         'http://localhost:8080/api/post/' + id,
         function(post){

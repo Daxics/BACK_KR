@@ -9,10 +9,11 @@
                 <a class="nav-link" href="/posts.php">Posts</a>
                 <a class="nav-link" href="/tags.php">Tags</a>
                 <a class="nav-link" href="/authors.php">Authors</a>
+                <a class="nav-link" href="/users.php">Authors</a>
             </div>
         </div>
         <div class="navbar-nav">
-            <a class="nav-link" href="/profile.php?id=<?=$_SESSION['user']['id_user']?>">Profile</a>
+            <a class="nav-link user" href="/profile.php?id=<?=$_SESSION['user']['id_user']?>">Profile</a>
         </div>
     </div>
 </nav>

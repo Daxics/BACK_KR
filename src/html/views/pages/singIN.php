@@ -38,7 +38,7 @@ use App\Services\Page;
 <!--        <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
 <!--    </div>-->
     <div class="d-grid gap-2 col-8 mx-auto">
-        <div class="form-text text-danger msg d-none"></div>
+        <div class="form-text text-danger msg d-none text-center"></div>
 
         <button type="submit" class="btn btn-primary btn-lg btn-log mt-2 mb-2">Login</button>
     </div>

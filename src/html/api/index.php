@@ -10,6 +10,7 @@ require_once "../vendor/autoload.php";
 use App\Tables\Base_API;
 use App\Tables\Post;
 use App\Tables\User;
+use App\Tables\Tag;
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
@@ -29,20 +30,38 @@ if (isset($params[1])) {
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
+
 switch ($method) {
     case 'GET':
         if (isset($id)) {
             switch ($type) {
-                case 'user':
-                    break;
                 case 'post':
                     Post::getPost($connect, $id);
+                    break;
+                    case 'user':
+                    User::getUser($connect, $id);
                     break;
             }
         } else {
             switch ($type) {
                 case 'posts':
-                    Post::getPosts($connect);
+                    Post::getPosts($connect, $_GET['s'] ?? '');
+                    break;
+                case 'count':
+                    Base_API::getCount($connect, $_GET['t'] ?? '');
+                    break;
+                case 'users':
+                    Base_API::getAllOut($connect, $type);
+                    break;
+                case 'tags':
+                    Base_API::getAllOut($connect, $type);
+                    break;
+                case 'subTable':
+                    switch ($_GET['t']){
+                        case 'posts':
+                            Post::getSubtable($connect, $_GET['s'] ?? '');
+                            break;
+                    }
                     break;
             }
         }
@@ -57,6 +76,9 @@ switch ($method) {
                 break;
             case 'userCheck':
                 User::checkUser($connect, $_POST);
+                break;
+            case 'tag':
+                Tag::addTag($connect, $_GET['name'] ?? '');
                 break;
         }
         break;
@@ -75,6 +97,9 @@ switch ($method) {
                 break;
             case 'post':
                 Post::delPost($connect, $id);
+                break;
+                case 'tags':
+                Tag::delTag($connect, $id);
                 break;
         }
         break;

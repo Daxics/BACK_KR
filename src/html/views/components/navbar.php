@@ -6,9 +6,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" href="/posts.php">Posts</a>
-                <a class="nav-link active" href="/tags.php">Tags</a>
-                <a class="nav-link active" href="/authors.php">Authors</a>
+                <a class="nav-link" href="/posts.php">Posts</a>
+                <a class="nav-link" href="/tags.php">Tags</a>
+                <a class="nav-link" href="/authors.php">Authors</a>
+                <a class="nav-link" href="/users.php">Authors</a>
             </div>
         </div>
         <div class="navbar-nav">
