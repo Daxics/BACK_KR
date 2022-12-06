@@ -13,14 +13,8 @@ use App\Services\Page;
 
 <body class="container-fluid p-3 px-5">
 
-<?php
-if (!empty($_SESSION['user'])) {
-    Page::part('navbarUser');
+<?php Page::part('navbar');?>
 
-} else{
-    Page::part('navbar');
-}
-?>
 
 <div class="d-flex p-4 g-4">
     <div class=" d-flex flex-column align-self-start mt-2" style="min-width: 13rem;">

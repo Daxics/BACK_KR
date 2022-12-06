@@ -39,7 +39,10 @@ switch ($method) {
                     Post::getPost($connect, $id);
                     break;
                     case 'user':
-                    User::getUser($connect, $id);
+                    User::get_user($connect, $id);
+                    break;
+                    case 'count_comm':
+                    User::get_count_comm($connect, $id);
                     break;
             }
         } else {
@@ -50,6 +53,7 @@ switch ($method) {
                 case 'count':
                     Base_API::getCount($connect, $_GET['t'] ?? '');
                     break;
+
                 case 'users':
                     Base_API::getAllOut($connect, $type);
                     break;
@@ -72,10 +76,10 @@ switch ($method) {
                 Post::addPost($connect, $_POST, $_FILES);
                 break;
             case 'userAdd':
-                User::addUser($connect, $_POST);
+                User::add_user($connect, $_POST);
                 break;
             case 'userCheck':
-                User::checkUser($connect, $_POST);
+                User::check_user($connect, $_POST);
                 break;
             case 'tag':
                 Tag::addTag($connect, $_GET['name'] ?? '');

@@ -48,19 +48,19 @@ class Post
             $file_name = time() . ".$extension";
             $file_path =  'download/'. $file_name;
             $file = $file_data['file']['tmp_name'];
-//            if (move_uploaded_file($file, $file_path)){
+            if (move_uploaded_file($file, $file_path)){
                 $disc = $data['disc'];
                 $tags = explode(' ', $data['tags']);
                 print_r($tags);
-//                $connection->query("INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
-//                                (NULL,1,NULL,'$disc','$file_name','$file_path');");
+                $connection->query("INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
+                                (NULL,1,NULL,'$disc','$file_name','$file_path');");
 
                 http_response_code(201);
                 $res = [
                     "status" => true,
-//                    "post_id" => mysqli_insert_id($connection)
+                    "post_id" => mysqli_insert_id($connection)
                 ];
-//            } else {
+            } else {
                 http_response_code(400);
                 $res = [
                     "status" => false,
@@ -68,7 +68,7 @@ class Post
                 ];
             }
 
-//        }
+        }
         echo json_encode($res);
     }
 

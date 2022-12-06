@@ -15,7 +15,7 @@ class Base_API
     }
 
     public static function getCount($connection, $table){
-        $res = $connection->query("SELECT COUNT(*) FROM $table");
+        $res = $connection->query("SELECT COUNT(*) count FROM $table");
         $res = mysqli_fetch_assoc($res);
         echo json_encode($res);
     }

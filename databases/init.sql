@@ -24,18 +24,6 @@ CREATE TABLE  IF NOT EXISTS `users` (
 
 
 -- ---
--- Table 'tags'
---
--- ---
-
-CREATE TABLE IF NOT EXISTS `tags` (
-	`id_tag` INTEGER(20) AUTO_INCREMENT NOT NULL,
-	`regularTag` VARCHAR(10),
-	PRIMARY KEY (`id_tag`)
-);
-
-
--- ---
 -- Table 'posts'
 --
 -- ---
@@ -77,16 +65,6 @@ CREATE TABLE IF NOT EXISTS `authors` (
 );
 
 -- ---
--- Table 'post_tags'
---
--- ---
-
-CREATE TABLE IF NOT EXISTS `post_tags` (
-	`id_post` INTEGER(20) NOT NULL,
-	`id_tag` INTEGER(20) NOT NULL
-);
-
--- ---
 -- Table 'post_author'
 --
 -- ---
@@ -108,6 +86,46 @@ CREATE TABLE IF NOT EXISTS `roles` (
 );
 
 -- ---
+-- Table 'tags'
+--
+-- ---
+
+CREATE TABLE IF NOT EXISTS tags (
+    `post_id` BIGINT UNSIGNED NOT NULL UNIQUE,
+    FOREIGN KEY (post_id) REFERENCES posts(id_post),
+    `anime` BIT DEFAULT 0 NULL COMMENT 'Аниме',
+    `biography` BIT DEFAULT 0 NULL COMMENT 'Биография',
+    `actions` BIT DEFAULT 0 NULL COMMENT 'Боевик',
+    `western` BIT DEFAULT 0 NULL COMMENT 'Вестерн',
+    `military` BIT DEFAULT 0 NULL COMMENT 'Военный жанр'
+);
+
+-- ---
+-- Table 'tags'
+--
+-- ---
+
+CREATE TABLE IF NOT EXISTS authors (
+    `post_id` BIGINT UNSIGNED NOT NULL UNIQUE,
+    FOREIGN KEY (post_id) REFERENCES posts(id_post),
+    `anime` BIT DEFAULT 0 NULL COMMENT 'Аниме',
+    `biography` BIT DEFAULT 0 NULL COMMENT 'Биография',
+    `actions` BIT DEFAULT 0 NULL COMMENT 'Боевик',
+    `western` BIT DEFAULT 0 NULL COMMENT 'Вестерн',
+    `military` BIT DEFAULT 0 NULL COMMENT 'Военный жанр'
+);
+
+CREATE TABLE IF NOT EXISTS character (
+    `post_id` BIGINT UNSIGNED NOT NULL UNIQUE,
+    FOREIGN KEY (post_id) REFERENCES posts(id_post),
+    `anime` BIT DEFAULT 0 NULL COMMENT 'Аниме',
+    `biography` BIT DEFAULT 0 NULL COMMENT 'Биография',
+    `actions` BIT DEFAULT 0 NULL COMMENT 'Боевик',
+    `western` BIT DEFAULT 0 NULL COMMENT 'Вестерн',
+    `military` BIT DEFAULT 0 NULL COMMENT 'Военный жанр'
+);
+
+-- ---
 -- Foreign Keys
 -- ---
 
@@ -115,8 +133,6 @@ ALTER TABLE `users` ADD FOREIGN KEY (id_role) REFERENCES `roles` (`id_role`);
 ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`);
-ALTER TABLE `post_tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
-ALTER TABLE `post_tags` ADD FOREIGN KEY (id_tag) REFERENCES `tags` (`id_tag`) ON DELETE CASCADE;
 ALTER TABLE `post_authors` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `post_authors` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author`) ON DELETE CASCADE;
 
@@ -143,14 +159,14 @@ ALTER TABLE `post_authors` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id
 
 INSERT INTO `authors` (`id_author`,`author`) VALUES
     (NULL,'Yang Do');
-INSERT INTO `tags` (`id_tag`,`regularTag`) VALUES
+INSERT INTO cherecter (`id_tag`,`regularTag`) VALUES
     (NULL,'Пейзаж');
 INSERT INTO `roles` (`id_role`,`role`) VALUES
     (NULL,'RegUser');
 
 
 INSERT INTO `users` (`id_user`,`id_role`,`nickName`,`e_mail`,`password`) VALUES
-    (NULL,1,'Pisun','pisun@mail.cum','$apr1$g/9PpRf1$Tl9zPvUnToKdiGt8hRap//');
+    (NULL,1,'User','user@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');
 INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
     (NULL,1,NULL,'sex instructor',NULL,NULL);
 

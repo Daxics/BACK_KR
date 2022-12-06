@@ -16,14 +16,8 @@ use App\Services\Page;
 
 <body class="container-fluid p-3 px-5" id="<?=$request?>">
 
-<?php
-if (!empty($_SESSION['user'])) {
-    Page::part('navbarUser');
+<?php Page::part('navbar');?>
 
-} else{
-    Page::part('navbar');
-}
-?>
 
 
 

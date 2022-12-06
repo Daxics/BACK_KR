@@ -4277,3 +4277,63 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Tue Dec 06 02:04:39.694088 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
 [Tue Dec 06 02:04:39.695123 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
 [Tue Dec 06 02:04:39.695774 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 02:53:24.178902 2022] [php:error] [pid 21] [client 192.168.208.5:54008] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'dateTime' in field list is ambiguous in /var/www/html/app/Tables/User.php:14\nStack trace:\n#0 /var/www/html/app/Tables/User.php(14): mysqli->query('SELECT users.id...')\n#1 /var/www/html/api/index.php(42): App\\Tables\\User::get_user(Object(mysqli), '1')\n#2 {main}\n  thrown in /var/www/html/app/Tables/User.php on line 14
+[Tue Dec 06 02:58:11.048876 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 06 02:58:11.064725 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 02:58:11.066559 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:09:38.929604 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.224.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 06 04:09:59.888941 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 04:09:59.893880 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:09:59.889529 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Tue Dec 06 04:09:59.896633 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Dec 06 04:09:59.891455 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 04:09:59.892462 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 04:09:59.900364 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:09:59.892924 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 04:09:59.901624 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:09:59.892926 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 04:09:59.902732 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:09:59.895380 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:09:59.899972 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:09:59.901156 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:09:59.902127 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:09:59.905175 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:09:59.915637 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:11:01.075345 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 06 04:11:01.076960 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:11:01.079373 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 04:14:28.183367 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 06 04:14:28.189179 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 04:14:28.203500 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 08:22:56.340310 2022] [php:warn] [pid 24] [client 192.168.224.5:58654] PHP Warning:  Undefined array key "id" in /var/www/html/views/pages/createPost.php on line 29, referer: http://localhost:8080/posts.php
+[Tue Dec 06 08:23:04.869351 2022] [php:warn] [pid 19] [client 192.168.224.5:58676] PHP Warning:  Undefined array key "id" in /var/www/html/views/pages/createPost.php on line 29, referer: http://localhost:8080/authors.php
+[Tue Dec 06 08:23:11.992715 2022] [php:warn] [pid 19] [client 192.168.224.5:56586] PHP Warning:  Undefined array key "id" in /var/www/html/views/pages/createPost.php on line 29, referer: http://localhost:8080/authors.php
+[Tue Dec 06 08:25:29.162659 2022] [php:warn] [pid 22] [client 192.168.224.5:57464] PHP Warning:  Undefined array key "id" in /var/www/html/views/pages/createPost.php on line 29, referer: http://localhost:8080/tags.php
+[Tue Dec 06 08:26:53.122067 2022] [php:warn] [pid 19] [client 192.168.224.5:51866] PHP Warning:  Undefined array key "id" in /var/www/html/views/pages/createPost.php on line 29, referer: http://localhost:8080/posts.php
+[Tue Dec 06 10:31:16.043040 2022] [php:warn] [pid 19] [client 192.168.224.5:56112] PHP Warning:  unlink(download/): Is a directory in /var/www/html/app/Tables/Post.php on line 93
+[Tue Dec 06 10:31:21.484049 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 06 10:31:21.497301 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 10:31:21.512169 2022] [dbd:crit] [pid 25] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 10:31:31.495361 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 06 10:31:31.512720 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 10:31:31.529098 2022] [dbd:crit] [pid 26] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 11:02:07.354937 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.240.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 06 11:22:35.370887 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 11:22:35.371811 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 11:22:35.372451 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 11:22:35.381785 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 11:22:35.389324 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 11:22:35.401791 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 11:22:35.395912 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Tue Dec 06 11:22:35.413023 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Dec 06 11:22:35.401185 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 11:22:35.417280 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 11:22:35.401462 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 11:22:35.428666 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 11:22:35.401724 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 06 11:22:35.428145 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 11:22:35.429276 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 06 11:22:35.429744 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 06 11:22:35.431603 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!

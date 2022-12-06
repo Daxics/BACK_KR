@@ -4,19 +4,19 @@ session_start();
 
 class User
 {
-    public static function getUser($connection, $id)
+    public static function get_user($connection, $id)
     {
-
-        $req = "SELECT users.id_user, COUNT(*) AS ".'count_posts'.",  nickName, e_mail, role FROM users 
+        $req = "SELECT users.id_user, COUNT(*) AS ".'count_posts'.",  nickName, e_mail, role, users.dateTime FROM users 
                 INNER JOIN roles ON users.id_role = roles.id_role
                 INNER JOIN posts ON posts.id_user = posts.id_user
+                WHERE users.id_user = '$id'
                 GROUP BY users.id_user;";
         $post = $connection->query($req);
         if (mysqli_num_rows($post) === 0) {
             http_response_code(404);
             $res = [
                 "status" => false,
-                "massage" => "Post not found"
+                "massage" => "User not found"
             ];
             echo json_encode($res);
         } else {
@@ -25,7 +25,14 @@ class User
         }
     }
 
-    public static function checkUser($connection, $data)
+    public static function get_count_comm($connection, $id){
+        $res = $connection->query("SELECT COUNT(*) count FROM comments WHERE id_user = '$id'");
+        $res = mysqli_fetch_assoc($res);
+        echo json_encode($res);
+
+    }
+
+    public static function check_user($connection, $data)
     {
 
         $error_fields = [];
@@ -74,7 +81,7 @@ class User
         echo json_encode($response);
     }
 
-    public static function addUser($connection, $data)
+    public static function add_user($connection, $data)
     {
         $nickName = $data['nickName'];
         $e_mail = $data['e_mail'];

@@ -13,13 +13,8 @@ use App\Services\Page;
 
 <body class="container-fluid p-3 px-5">
 
-<?php
-if (!empty($_SESSION['user'])) {
-        Page::part('navbarUser');
-} else {
-    Page::part('navbar');
-}
-?>
+<?php Page::part('navbar');?>
+
 
 <!--    col-sm-2-->
 

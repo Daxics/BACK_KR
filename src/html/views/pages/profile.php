@@ -15,14 +15,8 @@ $id = $_GET['id'] ?? NULL;
 
 <body class="container-fluid p-3 px-5">
 
-<?php
-if (!empty($_SESSION['user'])) {
-    Page::part('navbarUser');
-} else{
-    Page::part('navbar');
-}
-?>
 
+<?php Page::part('navbar');?>
 
 
 
@@ -30,12 +24,9 @@ if (!empty($_SESSION['user'])) {
             <div class="col-md-9 mx-auto">
                 <div class="d-flex">
                     <div class="p-2 w-100">
-                        <h2>
+                        <h1 class="name">
                             Kshiti Ghelani
-                        </h2>
-                        <h6 class="mt-3">
-                            <a class="text-primary">Log Out</a>
-                        </h6>
+                        </h1>
                     </div>
                     <div class="p-2 flex-shrink-1">
                         <button type="button" class="btn btn-outline-primary">Edit Profile</button>
@@ -54,7 +45,7 @@ if (!empty($_SESSION['user'])) {
                 <label>User Id</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p>Kshiti123</p>
+                <p class="id"></p>
             </div>
         </div>
         <div class="row">
@@ -62,7 +53,7 @@ if (!empty($_SESSION['user'])) {
                 <label>Name</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p>Kshiti Ghelani</p>
+                <p class="name"></p>
             </div>
         </div>
         <div class="row">
@@ -70,7 +61,7 @@ if (!empty($_SESSION['user'])) {
                 <label>Email</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p>kshitighelani@gmail.com</p>
+                <p class="e_mail"></p>
             </div>
         </div>
         <div class="row">
@@ -78,23 +69,7 @@ if (!empty($_SESSION['user'])) {
                 <label>Join Date</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p>kshitighelani@gmail.com</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <label>Uploads</label>
-            </div>
-            <div class="col-md-4 text-primary">
-                <p>123 456 7890</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <label>Comments</label>
-            </div>
-            <div class="col-md-4 text-primary">
-                <p>Web Developer and Designer</p>
+                <p class="date"></p>
             </div>
         </div>
         <div class="row">
@@ -102,7 +77,25 @@ if (!empty($_SESSION['user'])) {
                 <label>Level</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p>Web Developer and Designer</p>
+                <p class="level"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label>Uploads</label>
+            </div>
+            <div class="col-md-4 text-primary">
+                <p class="uploads"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label>Comments</label>
+            </div>
+            <div class="col-md-4 text-primary">
+                <a href="comments.php?id=<?=$id?>" style="text-decoration: none;">
+                    <p class="comments"></p>
+                </a>
             </div>
         </div>
     </div>
