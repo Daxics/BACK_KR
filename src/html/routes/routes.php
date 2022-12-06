@@ -12,5 +12,9 @@ Router::page('/authors', 'authors');
 Router::page('/createPost', 'createPost');
 Router::page('/logout', 'logOUT');
 Router::page('/comments', 'comments');
+Router::page('/characters', 'characters');
+
+//Router::get('/bage/counts',Posts_count::class ,'posts_count');
+
 
 Router::enable();

@@ -1,4 +1,3 @@
 <?php
-session_start();
 unset($_SESSION['user']);
-header('Location: /posts.php');
+header('Location: /posts');

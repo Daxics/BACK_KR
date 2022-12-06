@@ -6,11 +6,7 @@ class User
 {
     public static function get_user($connection, $id)
     {
-        $req = "SELECT users.id_user, COUNT(*) AS ".'count_posts'.",  nickName, e_mail, role, users.dateTime FROM users 
-                INNER JOIN roles ON users.id_role = roles.id_role
-                INNER JOIN posts ON posts.id_user = posts.id_user
-                WHERE users.id_user = '$id'
-                GROUP BY users.id_user;";
+        $req = "SELECT id_user, id_role, nickName, e_mail, posts_count, comments_count, dateTime FROM users WHERE users.id_user = '$id'";
         $post = $connection->query($req);
         if (mysqli_num_rows($post) === 0) {
             http_response_code(404);

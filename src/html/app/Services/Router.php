@@ -26,4 +26,5 @@ class Router
     private static function not_found_page(){
         require_once "views/errors/404.php";
     }
+
 }

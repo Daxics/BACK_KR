@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 use App\Services\Page;
 
 ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $page = $_GET['page'] ?? 1;
 $request = $_GET['r'] ?? 0; //request

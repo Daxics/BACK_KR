@@ -53,12 +53,11 @@ switch ($method) {
                 case 'count':
                     Base_API::getCount($connect, $_GET['t'] ?? '');
                     break;
-
                 case 'users':
                     Base_API::getAllOut($connect, $type);
                     break;
-                case 'tags':
-                    Base_API::getAllOut($connect, $type);
+                case 'count_all_posts':
+                    Post::getCount($connect);
                     break;
                 case 'subTable':
                     switch ($_GET['t']){

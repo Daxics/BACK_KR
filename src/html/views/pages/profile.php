@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 use App\Services\Page;
 
@@ -24,8 +23,8 @@ $id = $_GET['id'] ?? NULL;
             <div class="col-md-9 mx-auto">
                 <div class="d-flex">
                     <div class="p-2 w-100">
-                        <h1 class="name">
-                            Kshiti Ghelani
+                        <h1 class="name text-primary">
+                            Wrong user
                         </h1>
                     </div>
                     <div class="p-2 flex-shrink-1">
@@ -45,7 +44,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>User Id</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="id"></p>
+                <p class="id">0</p>
             </div>
         </div>
         <div class="row">
@@ -53,7 +52,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>Name</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="name"></p>
+                <p class="name text-primary">Wrong user</p>
             </div>
         </div>
         <div class="row">
@@ -61,7 +60,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>Email</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="e_mail"></p>
+                <p class="e_mail">0</p>
             </div>
         </div>
         <div class="row">
@@ -69,7 +68,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>Join Date</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="date"></p>
+                <p class="date">0</p>
             </div>
         </div>
         <div class="row">
@@ -77,7 +76,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>Level</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="level"></p>
+                <p class="level">0</p>
             </div>
         </div>
         <div class="row">
@@ -85,7 +84,7 @@ $id = $_GET['id'] ?? NULL;
                 <label>Uploads</label>
             </div>
             <div class="col-md-4 text-primary">
-                <p class="uploads"></p>
+                <p class="uploads">0</p>
             </div>
         </div>
         <div class="row">
@@ -93,8 +92,8 @@ $id = $_GET['id'] ?? NULL;
                 <label>Comments</label>
             </div>
             <div class="col-md-4 text-primary">
-                <a href="comments.php?id=<?=$id?>" style="text-decoration: none;">
-                    <p class="comments"></p>
+                <a href="comments?id=<?=$id?>" style="text-decoration: none;">
+                    <p class="comments">0</p>
                 </a>
             </div>
         </div>

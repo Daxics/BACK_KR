@@ -103,5 +103,9 @@ class Post
         echo json_encode($res);
     }
 
-
+    public static function getCount($connection)
+    {
+        $posts = $connection->query("SELECT count FROM count_posts");
+        echo(mysqli_fetch_assoc($posts)['count']);
+    }
 }

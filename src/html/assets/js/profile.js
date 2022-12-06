@@ -9,13 +9,8 @@ $(document).ready(function () {
             $('.e_mail').text(main.e_mail);
             $('.date').text(main.dateTime);
             $('.level').text(main.role);
-            $('.uploads').text(main.count_posts);
-        }
-    );
-    $.getJSON(
-        'http://localhost:8000/api/count_comm/' + id,
-        function(comm){
-            $('.comments').text(comm.count);
+            $('.uploads').text(main.posts_count);
+            $('.comments').text(main.comments_count);
         }
     );
 });
