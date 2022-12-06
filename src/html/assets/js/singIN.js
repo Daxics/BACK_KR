@@ -7,7 +7,7 @@ $('.btn-log').click(function (e) {
         password = $('input[name="password"]').val(); //получаем поле password
 
     $.ajax({
-        url: 'http://localhost:8080/api/userCheck',
+        url: 'http://localhost:8000/api/userCheck',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -16,7 +16,7 @@ $('.btn-log').click(function (e) {
         },
         success(data) {
             if (data.status) {
-                document.location.href = '/posts.php';
+                document.location.href = '/posts';
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

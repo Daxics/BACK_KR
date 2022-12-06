@@ -14,10 +14,10 @@ class Router
         ];
     }
     public static function enable(){
-        $query = $_GET['q'];
+        $query = $_GET['q'] ?? 'posts';
         foreach (self::$list as $route){
             if ($route["uri"] === '/'. $query) {
-                require_once "views/pages/" . $route['page'];
+                require_once "views/pages/" . $route['page'] . '.php';
                 die();
             }
         }

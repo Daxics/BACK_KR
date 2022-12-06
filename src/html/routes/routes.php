@@ -2,15 +2,15 @@
 
 use App\Services\Router;
 
-Router::page('/singUP.php', 'singUP.php');
-Router::page('/singIN.php', 'singIN.php');
-Router::page('/post.php', 'post.php');
-Router::page('/posts.php', 'posts.php');
-Router::page('/profile.php', 'profile.php');
-Router::page('/tags.php', 'tags.php');
-Router::page('/authors.php', 'authors.php');
-Router::page('/createPost.php', 'createPost.php');
-Router::page('/logout.php', 'logOUT.php');
-Router::page('/comments.php', 'comments.php');
+Router::page('/singUP', 'singUP');
+Router::page('/singIN', 'singIN');
+Router::page('/post', 'post');
+Router::page('/posts', 'posts');
+Router::page('/profile', 'profile');
+Router::page('/tags', 'tags');
+Router::page('/authors', 'authors');
+Router::page('/createPost', 'createPost');
+Router::page('/logout', 'logOUT');
+Router::page('/comments', 'comments');
 
 Router::enable();

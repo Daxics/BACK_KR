@@ -10,7 +10,7 @@ $('.btn-reg').click(function (e) {
 
 
     $.ajax({
-        url: 'http://localhost:8080/api/userAdd',
+        url: 'http://localhost:8000/api/userAdd',
         type: 'POST',
         data: {
             nickName: nickName,
@@ -20,7 +20,7 @@ $('.btn-reg').click(function (e) {
         },
         success(data) {
             if (data.status) {
-                document.location.href = '/singIN.php';
+                document.location.href = '/singIN';
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
