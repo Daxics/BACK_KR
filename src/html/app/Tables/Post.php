@@ -51,7 +51,7 @@ class Post
             if (move_uploaded_file($file, $file_path)){
                 $disc = $data['disc'];
                 $tags = explode(' ', $data['tags']);
-                print_r($tags);
+//                print_r($tags);
                 $connection->query("INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
                                 (NULL,1,NULL,'$disc','$file_name','$file_path');");
 

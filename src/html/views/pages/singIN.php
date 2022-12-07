@@ -1,7 +1,7 @@
 <?php
 
 if (!empty($_SESSION['user'])) {
-    header('Location: /posts.php');
+    header('Location: /');
 }
 
 use App\Services\Page;

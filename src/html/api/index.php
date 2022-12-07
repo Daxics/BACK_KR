@@ -41,9 +41,6 @@ switch ($method) {
                     case 'user':
                     User::get_user($connect, $id);
                     break;
-                    case 'count_comm':
-                    User::get_count_comm($connect, $id);
-                    break;
             }
         } else {
             switch ($type) {
@@ -53,14 +50,20 @@ switch ($method) {
                 case 'count':
                     Base_API::getCount($connect, $_GET['t'] ?? '');
                     break;
+                case 'all':
+                    Base_API::getAllOut($connect, $_GET['t'] ?? '');
+                    break;
                 case 'users':
                     Base_API::getAllOut($connect, $type);
                     break;
                 case 'count_all_posts':
                     Post::getCount($connect);
                     break;
+                case 'tags':
+                    Tag::getTags($connect);
+                    break;
                 case 'subTable':
-                    switch ($_GET['t']){
+                    switch ($_GET['t']) {
                         case 'posts':
                             Post::getSubtable($connect, $_GET['s'] ?? '');
                             break;

@@ -4,6 +4,7 @@ use App\Services\Router;
 
 Router::page('/singUP', 'singUP');
 Router::page('/singIN', 'singIN');
+Router::page('/home', 'home');
 Router::page('/post', 'post');
 Router::page('/posts', 'posts');
 Router::page('/profile', 'profile');

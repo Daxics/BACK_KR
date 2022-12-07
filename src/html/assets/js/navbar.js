@@ -10,9 +10,9 @@ $('.navbar-nav .nav-link').each(function () {
 
 
 $.get('http://localhost:8000/api/count_all_posts', function(data) {
-    $('.posts').each(function () {
+    $('.navbar-nav .posts').each(function () {
         let hr = $(this).attr('href');
-        $("a").attr("href", "hr" + "?z=" + data);
+        $(this).attr("href",hr + "?z=" + data);
     });
-    this.attr('href');
+    // this.attr('href');
 });

@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Services\Page;
@@ -27,8 +28,12 @@ use App\Services\Page;
     </div>
 </div>
 
+
 <?php Page::part('scripts'); ?>
 <script src="/assets/js/profile.js"></script>
 </body>
 
 </html>
+
+
+

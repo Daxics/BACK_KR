@@ -30,7 +30,7 @@ use App\Services\Page;
 
     </div>
     <div class=" d-flex flex-column">
-        <div class="d-flex flex-wrap posts-list" id="<?=$page?>"></div>
+        <div class="d-flex flex-wrap posts-list" id="<?=$page?> " style="min-height: 640px;"></div>
         <?php Page::part('pagination'); ?>
     </div>
 </div>

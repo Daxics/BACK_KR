@@ -2,6 +2,12 @@
 
 use App\Services\Page;
 
+
+if (empty($_SESSION['user'])) {
+    header('Location: /');
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -42,101 +48,36 @@ use App\Services\Page;
                         aria-controls="nav-authors" aria-selected="false">Authors</button>
             </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content " id="nav-tabContent">
 
-            <div class="tab-pane fade show active" id="nav-tags"
+            <div class="tab-pane first-search fade show active" id="nav-tags"
                  role="tabpanel"
                  aria-labelledby="nav-tags-tab" tabindex="0">
                 <div class="d-flex py-3" role="search">
-                    <input class="form-control me-2" type="search"
+                    <input class="form-control" type="search"
                            placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
                 </div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1"
-                               type="checkbox"
-                               value="" id="firstCheckbox">
-                        <label class="form-check-label"
-                               for="firstCheckbox">First
-                            checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1"
-                               type="checkbox"
-                               value="" id="secondCheckbox">
-                        <label class="form-check-label"
-                               for="secondCheckbox">Second checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1"
-                               type="checkbox"
-                               value="" id="thirdCheckbox">
-                        <label class="form-check-label"
-                               for="thirdCheckbox">Third
-                            checkbox</label>
-                    </li>
-                </ul>
+                <ul class="list-group first-list"></ul>
             </div>
 
-            <div class="tab-pane fade" id="nav-characters"
+            <div class="tab-pane second-search fade" id="nav-characters"
                  role="tabpanel"
                  aria-labelledby="nav-characters-tab" tabindex="0">
                 <div class="d-flex py-3" role="search">
-                    <input class="form-control me-2" type="search"
+                    <input class="form-control second-search" type="search"
                            placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
                 </div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="firstCheckbox">
-                        <label class="form-check-label" for="firstCheckbox">First
-                            checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="secondCheckbox">
-                        <label class="form-check-label"
-                               for="secondCheckbox">Second checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="thirdCheckbox">
-                        <label class="form-check-label" for="thirdCheckbox">Third
-                            checkbox</label>
-                    </li>
-                </ul>
+                <ul class="list-group second-list"></ul>
             </div>
 
-            <div class="tab-pane fade" id="nav-authors"
+            <div class="tab-pane third-search fade" id="nav-authors"
                  role="tabpanel"
                  aria-labelledby="nav-authors-tab" tabindex="0">
                 <div class="d-flex py-3" role="search">
-                    <input class="form-control me-2" type="search"
+                    <input class="form-control third-search" type="search"
                            placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
                 </div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="firstCheckbox">
-                        <label class="form-check-label" for="firstCheckbox">First
-                            checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="secondCheckbox">
-                        <label class="form-check-label"
-                               for="secondCheckbox">Second checkbox</label>
-                    </li>
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox"
-                               value="" id="thirdCheckbox">
-                        <label class="form-check-label" for="thirdCheckbox">Third
-                            checkbox</label>
-                    </li>
-                </ul>
+                <ul class="list-group third-list"></ul>
             </div>
         </div>
     </div>

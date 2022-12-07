@@ -21,12 +21,6 @@ class User
         }
     }
 
-    public static function get_count_comm($connection, $id){
-        $res = $connection->query("SELECT COUNT(*) count FROM comments WHERE id_user = '$id'");
-        $res = mysqli_fetch_assoc($res);
-        echo json_encode($res);
-
-    }
 
     public static function check_user($connection, $data)
     {
