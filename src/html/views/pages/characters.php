@@ -19,7 +19,7 @@ use App\Services\Page;
 
 
 <?php Page::part('scripts'); ?>
-<script src="/assets/js/profile.js"></script>
+<script src="/assets/js/characters.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,8 @@ use App\Tables\Base_API;
 use App\Tables\Post;
 use App\Tables\User;
 use App\Tables\Tag;
+use App\Tables\Character;
+use App\Tables\Comment;
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
@@ -62,6 +64,9 @@ switch ($method) {
                 case 'tags':
                     Tag::getTags($connect);
                     break;
+                case 'characters':
+                    Character::getCharacters($connect);
+                    break;
                 case 'subTable':
                     switch ($_GET['t']) {
                         case 'posts':
@@ -86,6 +91,9 @@ switch ($method) {
             case 'tag':
                 Tag::addTag($connect, $_GET['name'] ?? '');
                 break;
+            case 'character':
+                Character::addCharacter($connect, $_GET['name'] ?? '');
+                break;
         }
         break;
     case 'PATCH':
@@ -104,8 +112,11 @@ switch ($method) {
             case 'post':
                 Post::delPost($connect, $id);
                 break;
-                case 'tags':
+            case 'tag':
                 Tag::delTag($connect, $id);
+                break;
+            case 'Character':
+                Character::delCharacter($connect, $id);
                 break;
         }
         break;

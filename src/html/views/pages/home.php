@@ -16,7 +16,7 @@ use App\Services\Page;
 <?php Page::part('navbar');?>
 
 
-<div class="p-5 mb-4 bg-light rounded-3">
+<div class="px-5 my-4 bg-light rounded-3">
     <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Custom jumbotron</h1>
         <p class="col-md-8 fs-4">Using a series of utilities, you can
@@ -30,7 +30,6 @@ use App\Services\Page;
 
 
 <?php Page::part('scripts'); ?>
-<script src="/assets/js/profile.js"></script>
 </body>
 
 </html>

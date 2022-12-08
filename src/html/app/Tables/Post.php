@@ -33,42 +33,93 @@ class Post
 
     public static function addPost($connection, $data, $file_data)
     {
-        if (empty($data['disc']) || empty($file_data['file'])) {
 
-            http_response_code(400);
+        $user_id = $data['user_id'];
+        $author_name = $data['author_name'];
+        $src = $data['src'];
+        if (isset($data['file'])) {
+            $file = $data['file'];
+        } else {
+            $file = $file_data['file'];
+        }
+        $disc = $data['disc'];
+        $tags_arr = json_decode($data['tags_arr']);
+        $characters_arr = json_decode($data['characters_arr']);
+        $tags = implode(",", $tags_arr) ;
+        $characters = implode(",", $characters_arr);
+
+        $error_fields = [];
+
+        if ($author_name === '') {
+            $error_fields[] = 'author_name';
+        }
+
+        if ($src === '') {
+            $error_fields[] = 'src';
+        }
+
+        if (isset($data['file'])) {
+            $file = $data['file'];
+            if ($file) {
+                $error_fields[] = 'file';
+            }
+        } else {
+            $file = $file_data['file'];
+            if ($file['name'] == "") {
+                $error_fields[] = 'file';
+            }
+        }
+
+        if (!empty($error_fields)) {
             $res = [
                 "status" => false,
-                "message" => 'Some data is not filled'
+                "type" => 1,
+                "message" => "Проверьте правильность полей",
+                "fields" => $error_fields
+            ];
+
+            echo json_encode($res);
+
+
+
+            die();
+        }
+
+        if (!is_dir('download/')) {
+            mkdir('download/', '0777', true);
+        }
+        $extension = pathinfo($file_data['file']['name'], PATHINFO_EXTENSION);
+        $file_name = time() . ".$extension";
+        $file_path = 'download/' . $file_name;
+        $file = $file_data['file']['tmp_name'];
+        if (move_uploaded_file($file, $file_path)) {
+            $req = ("INSERT INTO posts (id_user, id_author, source, disc, img_name, img)
+                    SELECT p.id_user, a.id_author, p.source, p.disc, p.img_name, p.img
+                    FROM (
+                        SELECT '$user_id' id_user, '$author_name' author_name, '$src' source, '$disc' disc, '$file_name' img_name, '$file_path' img
+                    ) p
+                    JOIN authors a ON a.author = p.author_name");
+            $connection->query("$req");
+
+            $insert_id = mysqli_insert_id($connection);
+
+            $connection->query("INSERT INTO tags VALUES ($insert_id,$tags)");
+            $connection->query("INSERT INTO characters VALUES ('$insert_id',$characters)");
+
+
+            http_response_code(201);
+            $res = [
+                "status" => true,
+                "post_id" => $insert_id
             ];
         } else {
-            if (!is_dir('download/')){
-                mkdir('download/', '0777', true);
-            }
-            $extension = pathinfo($file_data['file']['name'], PATHINFO_EXTENSION);
-            $file_name = time() . ".$extension";
-            $file_path =  'download/'. $file_name;
-            $file = $file_data['file']['tmp_name'];
-            if (move_uploaded_file($file, $file_path)){
-                $disc = $data['disc'];
-                $tags = explode(' ', $data['tags']);
-//                print_r($tags);
-                $connection->query("INSERT INTO `posts` (`id_post`,`id_user`,`source`,`disc`,`img_name`,`img`) VALUES
-                                (NULL,1,NULL,'$disc','$file_name','$file_path');");
-
-                http_response_code(201);
-                $res = [
-                    "status" => true,
-                    "post_id" => mysqli_insert_id($connection)
-                ];
-            } else {
-                http_response_code(400);
-                $res = [
-                    "status" => false,
-                    "message" => "File can't be uploaded"
-                ];
-            }
-
+            http_response_code(200);
+            $res = [
+                "status" => false,
+                "message" => "File can't be uploaded"
+            ];
         }
+
         echo json_encode($res);
     }
 

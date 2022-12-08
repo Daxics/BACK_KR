@@ -10,7 +10,7 @@ class Tag
             http_response_code(400);
             $res = [
                 "status" => false,
-                "message" => 'Some data is not filled or you have entered too many values'
+                "message" => 'Some data is not filled or you have entered incorrect values'
             ];
         } else {
             $check_tag = $connection->query("SELECT * FROM `tags_list` WHERE `tag_title` = '$tag'");

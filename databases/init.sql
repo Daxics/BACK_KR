@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS `posts` (
 	`id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
 	`id_user` INTEGER(20),
 	`id_author` INTEGER(20),
-	`id_character` INTEGER(20),
 	`source` VARCHAR(200),
 	`disc` VARCHAR(200),
     `img_name` VARCHAR(20),
@@ -69,13 +68,6 @@ CREATE TABLE IF NOT EXISTS `authors` (
 	PRIMARY KEY (`id_author`)
 );
 
-CREATE TABLE IF NOT EXISTS `characters` (
-     `id_character` INTEGER(20) AUTO_INCREMENT NOT NULL,
-     `character` VARCHAR(20),
-     `count` VARCHAR(20) DEFAULT 0,
-     PRIMARY KEY (`id_character`)
-);
-
 -- ---
 -- Table 'role'
 --
@@ -94,11 +86,11 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 CREATE TABLE IF NOT EXISTS `tags` (
     `id_post` INTEGER(40) NOT NULL ,
-    `anime` BIT DEFAULT 0 NULL COMMENT 'Аниме',
-    `biography` BIT DEFAULT 0 NULL COMMENT 'Биография',
-    `actions` BIT DEFAULT 0 NULL COMMENT 'Боевик',
-    `western` BIT DEFAULT 0 NULL COMMENT 'Вестерн',
-    `military` BIT DEFAULT 0 NULL COMMENT 'Военный жанр',
+    `anime` BIT DEFAULT 0,
+    `biography` BIT DEFAULT 0,
+    `actions` BIT DEFAULT 0,
+    `western` BIT DEFAULT 0,
+    `military` BIT DEFAULT 0,
     PRIMARY KEY (`id_post`)
 );
 
@@ -107,6 +99,29 @@ CREATE TABLE IF NOT EXISTS `tags_list` (
     `count` INTEGER(40) NOT NULL DEFAULT 0,
     PRIMARY KEY (`tag_title`)
 );
+
+
+-- ---
+-- Table 'characters'
+--
+-- ---
+
+CREATE TABLE IF NOT EXISTS `characters` (
+    `id_post` INTEGER(40) NOT NULL,
+    `Rin` BIT DEFAULT 0,
+    `Ishtar` BIT DEFAULT 0,
+    `Ereshkigal` BIT DEFAULT 0,
+    `Saber` BIT DEFAULT 0,
+    `Illya` BIT DEFAULT 0,
+    PRIMARY KEY (`id_post`)
+);
+
+CREATE TABLE IF NOT EXISTS `characters_list` (
+`character_title` VARCHAR(100) NOT NULL,
+    `count` INTEGER(40) NOT NULL DEFAULT 0,
+    PRIMARY KEY (`character_title`)
+);
+
 
 -- ---
 -- Table 'count_posts'
@@ -125,16 +140,16 @@ CREATE TABLE IF NOT EXISTS `count_posts` (
 -- posts count UPD
 -- ---
 DELIMITER $$
-CREATE TRIGGER authors_count_UPD AFTER INSERT ON `posts`
+CREATE TRIGGER authors_count_UPD AFTER INSERT ON `authors`
     FOR EACH ROW BEGIN
-    UPDATE `count_posts` SET count = count + 1 WHERE count_posts.id = 1;
+    SET NEW.count = OLD.count + 1;
 END $$
 DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER authors_count_DEL AFTER DELETE ON `posts`
     FOR EACH ROW BEGIN
-    UPDATE `count_posts` SET count = count - 1 WHERE count_posts.id = 1;
+    UPDATE `authors` SET count = count - 1 WHERE authors.id_author = OLD.id_author;
 END $$
 DELIMITER ;
 
@@ -182,7 +197,6 @@ DELIMITER ;
 ALTER TABLE `users` ADD FOREIGN KEY (id_role) REFERENCES `roles` (`id_role`);
 ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE CASCADE;
 ALTER TABLE `posts` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author`) ON DELETE SET NULL;
-ALTER TABLE `posts` ADD FOREIGN KEY (id_character) REFERENCES `characters` (`id_character`) ON DELETE SET NULL;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE SET NULL;
 ALTER TABLE `tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (id_post) ON DELETE CASCADE;
@@ -198,6 +212,7 @@ ALTER TABLE `comments` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `comments` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `authors` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `characters` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+ALTER TABLE `characters_list` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `roles` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `tags` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 ALTER TABLE `tags_list` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -213,8 +228,6 @@ ALTER TABLE `count_posts` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 INSERT INTO `authors` (`author`) VALUES
     ('Yang Do');
-INSERT INTO `characters` (`character`) VALUES
-    ('Ishtar');
 INSERT INTO `roles` (`role`) VALUES
     ('RegUser');
 INSERT INTO `count_posts` (id) VALUE
@@ -231,16 +244,29 @@ INSERT INTO `tags_list` (tag_title, count) VALUE
 INSERT INTO `tags_list` (tag_title, count) VALUE
     ('military', 0);
 
+INSERT INTO `characters_list` (character_title,count) VALUES
+    ('Rin',1);
+INSERT INTO `characters_list` (character_title,count) VALUES
+    ('Ishtar',0);
+INSERT INTO `characters_list` (character_title,count) VALUES
+    ('Ereshkigal',0);
+INSERT INTO `characters_list` (character_title,count) VALUES
+    ('Saber',1);
+INSERT INTO `characters_list` (character_title,count) VALUES
+    ('Illya',0);
 
 INSERT INTO `users` (`id_role`,`nickName`,`e_mail`,`password`) VALUES
     (1,'User','user@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');
 
-INSERT INTO `posts` ( id_user, id_author, id_character, disc, img_name, img) VALUES
-    (1,1,1,'sex instructor',NULL,NULL);
+INSERT INTO `posts` ( id_user, id_author, disc, img_name, img) VALUES
+    (1,1,'sex instructor',NULL,NULL);
 
 
 INSERT INTO `tags` (id_post, anime, biography, actions, western, military) VALUES
     (1,1,0,0,1,0);
+
+INSERT INTO `characters` (id_post, Rin, Ishtar, Ereshkigal, Saber, Illya) VALUES
+    (1,0,0,0,1,0);
 
 
 INSERT INTO `comments` (`id_comment`,`id_post`,`id_user`,`text`) VALUES
