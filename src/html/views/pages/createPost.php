@@ -48,7 +48,6 @@ if (empty($_SESSION['user'])) {
         <nav>
             <div class="d-flex pt-3">
                 <h4 class="form-label p-3">Post's tags selection</h4>
-                <button class="btn btn-primary submit" type="button">Button</button>
             </div>
 
 
@@ -92,6 +91,8 @@ if (empty($_SESSION['user'])) {
         </div>
         <div class="d-grid gap-2 p-3">
             <div class="form-text text-danger msg d-none text-center"></div>
+            <button class="btn btn-primary submit" type="button">Button</button>
+
         </div>
     </form>
 

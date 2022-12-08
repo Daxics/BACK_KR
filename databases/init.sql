@@ -139,12 +139,6 @@ CREATE TABLE IF NOT EXISTS `count_posts` (
 -- ---
 -- posts count UPD
 -- ---
-DELIMITER $$
-CREATE TRIGGER authors_count_UPD AFTER INSERT ON `authors`
-    FOR EACH ROW BEGIN
-    SET NEW.count = OLD.count + 1;
-END $$
-DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER authors_count_DEL AFTER DELETE ON `posts`

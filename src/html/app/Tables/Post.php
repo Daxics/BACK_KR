@@ -47,7 +47,6 @@ class Post
         $characters_arr = json_decode($data['characters_arr']);
         $tags = implode(",", $tags_arr) ;
         $characters = implode(",", $characters_arr);
-
         $error_fields = [];
 
         if ($author_name === '') {
@@ -105,6 +104,7 @@ class Post
 
             $connection->query("INSERT INTO tags VALUES ($insert_id,$tags)");
             $connection->query("INSERT INTO characters VALUES ('$insert_id',$characters)");
+            $connection->query("UPDATE authors SET count = count + 1 WHERE authors.author = '$author_name'");
 
 
             http_response_code(201);

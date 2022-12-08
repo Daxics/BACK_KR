@@ -5600,3 +5600,142 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Thu Dec 08 03:15:04.647615 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
 [Thu Dec 08 03:15:04.659232 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
 [Thu Dec 08 03:15:04.649299 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 03:30:32.976632 2022] [php:warn] [pid 17] [client 172.22.0.1:62608] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution in /var/www/html/api/index.php on line 3, referer: http://localhost:8000/singIN
+[Thu Dec 08 03:30:32.977444 2022] [php:error] [pid 17] [client 172.22.0.1:62608] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution in /var/www/html/api/index.php:3\nStack trace:\n#0 /var/www/html/api/index.php(3): mysqli->__construct('db', 'user', 'password', 'appDB')\n#1 {main}\n  thrown in /var/www/html/api/index.php on line 3, referer: http://localhost:8000/singIN
+[Thu Dec 08 03:30:34.286961 2022] [php:warn] [pid 18] [client 172.22.0.1:62610] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution in /var/www/html/api/index.php on line 3, referer: http://localhost:8000/singIN
+[Thu Dec 08 03:30:34.287723 2022] [php:error] [pid 18] [client 172.22.0.1:62610] PHP Fatal error:  Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution in /var/www/html/api/index.php:3\nStack trace:\n#0 /var/www/html/api/index.php(3): mysqli->__construct('db', 'user', 'password', 'appDB')\n#1 {main}\n  thrown in /var/www/html/api/index.php on line 3, referer: http://localhost:8000/singIN
+[Thu Dec 08 03:31:03.722048 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Unknown MySQL server host 'db' (-3)
+[Thu Dec 08 03:31:03.769715 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 03:31:03.791719 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 03:31:04.725617 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Unknown MySQL server host 'db' (-3)
+[Thu Dec 08 03:31:04.725617 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Unknown MySQL server host 'db' (-3)
+[Thu Dec 08 03:31:04.726428 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 03:31:04.729004 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 03:31:04.730229 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 03:31:04.729770 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.4. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 08 07:56:33.830742 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Thu Dec 08 07:56:33.831350 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 08 07:56:33.843131 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:33.843851 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:33.843334 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:33.844747 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:33.843639 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:33.846145 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:33.844349 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:33.845232 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:33.845318 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:33.848089 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:33.845029 2022] [dbd:error] [pid 16] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:33.848953 2022] [dbd:error] [pid 16] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:33.846454 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:33.848454 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:33.849275 2022] [dbd:crit] [pid 16] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:37.839462 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:37.849907 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:37.880606 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:38.163840 2022] [php:error] [pid 17] [client 172.22.0.1:57992] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /var/www/html/api/index.php:3\nStack trace:\n#0 /var/www/html/api/index.php(3): mysqli->__construct('db', 'user', 'password', 'appDB')\n#1 {main}\n  thrown in /var/www/html/api/index.php on line 3, referer: http://localhost:8000/singIN
+[Thu Dec 08 07:56:38.840991 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:38.842913 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:56:38.847282 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:38.846338 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:56:38.852170 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:56:38.853101 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:04.821557 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 08 07:59:15.496699 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:59:15.505420 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:15.498772 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Thu Dec 08 07:59:15.517662 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 08 07:59:15.509947 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:59:15.518589 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:15.512537 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:59:15.519404 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:15.512482 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:59:15.516191 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:15.517356 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 07:59:15.518984 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:15.519830 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:15.520516 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:15.524394 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:15.521537 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:15.526186 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:21.552119 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 07:59:21.563796 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 07:59:21.573398 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 07:59:22.318124 2022] [php:warn] [pid 17] [client 172.19.0.1:60880] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/singIN
+[Thu Dec 08 07:59:55.497756 2022] [php:warn] [pid 21] [client 172.19.0.1:55244] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/singUP
+[Thu Dec 08 08:00:03.255463 2022] [php:warn] [pid 18] [client 172.19.0.1:55246] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/singIN
+[Thu Dec 08 08:00:05.003528 2022] [php:warn] [pid 18] [client 172.19.0.1:55246] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/posts
+[Thu Dec 08 08:00:05.591636 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 08:00:05.593163 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 08:00:05.594180 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 08:00:08.554214 2022] [php:warn] [pid 20] [client 172.19.0.1:61956] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:00:08.595044 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 08:00:08.634224 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 08:00:08.650267 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 08:00:09.599264 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 08:00:09.601890 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 08:00:09.603502 2022] [dbd:crit] [pid 25] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 08:00:09.603561 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 08:00:09.606768 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 08:00:09.608302 2022] [dbd:crit] [pid 26] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 08:00:27.646507 2022] [php:warn] [pid 25] [client 172.19.0.1:61598] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:00:55.826879 2022] [php:warn] [pid 18] [client 172.19.0.1:56332] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:03:17.046567 2022] [php:warn] [pid 25] [client 172.19.0.1:56542] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:03:54.084721 2022] [php:warn] [pid 26] [client 172.19.0.1:55398] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:03:56.874750 2022] [php:warn] [pid 18] [client 172.19.0.1:55400] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:02.253603 2022] [php:warn] [pid 22] [client 172.19.0.1:55402] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:08.312163 2022] [php:warn] [pid 19] [client 172.19.0.1:60168] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:08.769149 2022] [php:warn] [pid 23] [client 172.19.0.1:60174] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:26.101346 2022] [php:warn] [pid 26] [client 172.19.0.1:58828] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:35.363810 2022] [php:warn] [pid 19] [client 172.19.0.1:55940] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:37.685711 2022] [php:warn] [pid 23] [client 172.19.0.1:55942] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 08:04:38.679072 2022] [php:warn] [pid 21] [client 172.19.0.1:55944] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 10:04:26.318351 2022] [php:warn] [pid 18] [client 172.19.0.1:65418] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/
+[Thu Dec 08 10:04:29.138570 2022] [php:warn] [pid 18] [client 172.19.0.1:65418] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/singIN
+[Thu Dec 08 10:04:30.523901 2022] [php:warn] [pid 18] [client 172.19.0.1:65418] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/posts
+[Thu Dec 08 10:04:32.629561 2022] [php:warn] [pid 24] [client 172.19.0.1:64460] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 10:05:16.422716 2022] [php:warn] [pid 22] [client 172.19.0.1:65476] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 160, referer: http://localhost:8000/createPost
+[Thu Dec 08 10:06:14.200579 2022] [php:warn] [pid 18] [client 172.19.0.1:56648] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/createPost
+[Thu Dec 08 11:45:49.448270 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Undefined array key "user" in /var/www/html/views/pages/createPost.php on line 21, referer: http://localhost:8000/posts
+[Thu Dec 08 11:45:49.449666 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/views/pages/createPost.php on line 21, referer: http://localhost:8000/posts
+[Thu Dec 08 11:45:49.963998 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/
+[Thu Dec 08 11:45:54.121245 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/singIN
+[Thu Dec 08 11:45:55.750381 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/posts
+[Thu Dec 08 11:45:57.026053 2022] [php:warn] [pid 22] [client 172.19.0.1:57522] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/createPost
+[Thu Dec 08 11:46:09.218793 2022] [php:warn] [pid 19] [client 172.19.0.1:56892] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/posts
+[Thu Dec 08 11:46:11.421608 2022] [php:warn] [pid 19] [client 172.19.0.1:56892] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/tags
+[Thu Dec 08 11:46:12.315585 2022] [php:warn] [pid 19] [client 172.19.0.1:56892] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/characters
+[Thu Dec 08 11:46:14.640172 2022] [php:warn] [pid 19] [client 172.19.0.1:56892] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/app/Tables/Post.php on line 159, referer: http://localhost:8000/authors
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 08 15:07:36.840876 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.1.13 configured -- resuming normal operations
+[Thu Dec 08 15:07:36.841528 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 08 15:07:36.842503 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 15:07:36.842919 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:07:36.843241 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:07:36.843526 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 15:07:36.845315 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:07:36.845684 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:07:36.849859 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 15:07:36.850033 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 15:07:36.851334 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:07:36.850138 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Thu Dec 08 15:07:36.850819 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:07:36.852738 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:07:36.851838 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:07:36.852271 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:07:36.854143 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:08:43.945264 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 15:08:43.956656 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:08:43.958985 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:08:44.914432 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 15:08:44.914738 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 15:08:44.915414 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:08:44.915769 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:08:44.916084 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:08:44.919358 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:08:49.919619 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Thu Dec 08 15:08:49.920333 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Thu Dec 08 15:08:49.920763 2022] [dbd:crit] [pid 25] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Thu Dec 08 15:11:53.897774 2022] [php:warn] [pid 22] [client 172.19.0.1:60302] PHP Warning:  unlink(download/): Is a directory in /var/www/html/app/Tables/Post.php on line 144
