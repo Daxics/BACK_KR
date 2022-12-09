@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let id = ($('.posts-list').attr('id') - 1) * 24;
     $.getJSON(
-        'http://localhost:8000/api/posts?s=' + id,
+        'http://localhost:8000/api/post?s=' + id,
         function (posts) {
             posts.forEach((post) => {
                 let newImage = $(`

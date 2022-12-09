@@ -7,117 +7,44 @@ if(mysqli_connect_errno()) {
 
 require_once "../vendor/autoload.php";
 
-use App\Tables\Base_API;
-use App\Tables\Post;
-use App\Tables\User;
-use App\Tables\Tag;
-use App\Tables\Character;
-use App\Tables\Comment;
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json; charset=UTF-8");
 
-$q = $_GET['q'];
-$params = explode('/', $q);
+$params = explode('/', $_GET['q']);
 
-$type = $params[0];
-if (isset($params[1])) {
-    $id = $params[1];
-    if (isset($params[2])){
-        $column = $params[2];
-    }
-}
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-switch ($method) {
-    case 'GET':
-        if (isset($id)) {
-            switch ($type) {
-                case 'post':
-                    Post::getPost($connect, $id);
-                    break;
-                    case 'user':
-                    User::get_user($connect, $id);
-                    break;
-            }
-        } else {
-            switch ($type) {
-                case 'posts':
-                    Post::getPosts($connect, $_GET['s'] ?? '');
-                    break;
-                case 'count':
-                    Base_API::getCount($connect, $_GET['t'] ?? '');
-                    break;
-                case 'all':
-                    Base_API::getAllOut($connect, $_GET['t'] ?? '');
-                    break;
-                case 'users':
-                    Base_API::getAllOut($connect, $type);
-                    break;
-                case 'count_all_posts':
-                    Post::getCount($connect);
-                    break;
-                case 'tags':
-                    Tag::getTags($connect);
-                    break;
-                case 'characters':
-                    Character::getCharacters($connect);
-                    break;
-                case 'subTable':
-                    switch ($_GET['t']) {
-                        case 'posts':
-                            Post::getSubtable($connect, $_GET['s'] ?? '');
-                            break;
-                    }
-                    break;
-            }
-        }
+$method_type = $params[0];
+if (isset($params[1])) {
+    $id = $params[1];
+}
+
+//Base_API::getAllOut($connect, $_GET['t'] ?? '');
+//Base_API::getCount($connect, $_GET['t'] ?? '');
+
+
+switch ($method_type){
+    case "author":
+        require_once __DIR__. "/Entity/Author.php";
         break;
-    case 'POST':
-        switch ($type){
-            case 'postAdd':
-                Post::addPost($connect, $_POST, $_FILES);
-                break;
-            case 'userAdd':
-                User::add_user($connect, $_POST);
-                break;
-            case 'userCheck':
-                User::check_user($connect, $_POST);
-                break;
-            case 'tag':
-                Tag::addTag($connect, $_GET['name'] ?? '');
-                break;
-            case 'character':
-                Character::addCharacter($connect, $_GET['name'] ?? '');
-                break;
-        }
+    case "character":
+        require_once __DIR__. "/Entity/Character.php";
         break;
-    case 'PATCH':
-        if ($type === 'orders') {
-            if (isset($id) && isset($column)) {
-                $data = json_decode(file_get_contents("php://input"), true);
-                $update = new Base_API;
-                $update->patch($connect, $type, $id, $column, $data);
-            }
-        }
+    case "comment":
+        require_once __DIR__. "/Entity/Comment.php";
         break;
-    case 'DELETE':
-        switch ($type) {
-            case 'user':
-                break;
-            case 'post':
-                Post::delPost($connect, $id);
-                break;
-            case 'tag':
-                Tag::delTag($connect, $id);
-                break;
-            case 'Character':
-                Character::delCharacter($connect, $id);
-                break;
-        }
+    case "post":
+        require_once __DIR__. "/Entity/Post.php";
+        break;
+    case "tag":
+        require_once __DIR__. "/Entity/Tag.php";
+        break;
+    case "user":
+        require_once __DIR__. "/Entity/User.php";
         break;
 }
+

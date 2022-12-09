@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS appDB;
 CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON appDB.* TO 'user'@'%';
 FLUSH PRIVILEGES;
-set names 'utf8';
+SET NAMES 'utf8';
 
 USE appDB;
 

@@ -7,7 +7,7 @@ window.addEventListener('paste', e => {
 $(document).ready(function () {
     let authors_list = [];
     $.getJSON(
-        'http://localhost:8000/api/all?t=authors',
+        'http://localhost:8000/api/author?t=authors',
         function (authors) {
             $.each(authors, function () {
                 let mid_test = this['author'];
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.getJSON(
-        'http://localhost:8000/api/all?t=tags_list',
+        'http://localhost:8000/api/tag?t=tags_list',
         function (tags) {
             tags.forEach((tag) => {
                 let newImage = $(`
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.getJSON(
-        'http://localhost:8000/api/all?t=characters_list',
+        'http://localhost:8000/api/character?t=characters_list',
         function (characters) {
             characters.forEach((character) => {
                 let newImage = $(`
@@ -114,9 +114,9 @@ $('[name="file"]').change(function (e){
 $('.post-form .submit').click(function (e) {
     e.preventDefault();
 
-    $(`input`).removeClass('border-danger');
-    $(`textarea`).removeClass('border-danger');
-    $(`select`).removeClass('border-danger');
+    $(`input`).removeClass('is-invalid');
+    $(`textarea`).removeClass('is-invalid');
+    $(`select`).removeClass('is-invalid');
 
     let user_id = $('body').attr('id'), //получаем поле nickName
         author_name = $('[name="author"]').val(), //получаем поле nickName
@@ -147,11 +147,10 @@ $('.post-form .submit').click(function (e) {
         formData.append('disc', disc);
         formData.append('tags_arr', JSON.stringify(tags_arr));
         formData.append('characters_arr', JSON.stringify(characters_arr));
-        // formData.append('tags_arr', tags_arr);
-        // formData.append('characters_arr', characters_arr);
+
 
     $.ajax({
-        url: 'http://localhost:8000/api/postAdd',
+        url: 'http://localhost:8000/api/post',
         type: 'POST',
         dataType: 'json',
         processData: false,
@@ -171,7 +170,7 @@ $('.post-form .submit').click(function (e) {
                             $(`.search-border`).removeClass('border-0');
                             $(`.search-border`).addClass('border-danger');
                         }{
-                            $(`[name="${field}"]`).addClass('border-danger');
+                            $(`[name="${field}"]`).addClass('is-invalid');
                         }
                     });
                 }
