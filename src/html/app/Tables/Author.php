@@ -41,7 +41,7 @@ class Author
 
     public static function setAythor($connection, $author)
     {
-        if (empty($author['author']) or count(explode(' ', $author['author'])) > 1) {
+        if (empty($author['author'])) {
             http_response_code(400);
             $res = [
                 "status" => false,

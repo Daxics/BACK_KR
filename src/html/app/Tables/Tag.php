@@ -42,6 +42,16 @@ class Tag
         echo json_encode($postsList);
     }
 
+    public static function getPostsTags($connection, $id){
+        $posts = $connection->query("SELECT * FROM tags WHERE id_post = $id");
+        $postsList = [];
+        while ($post = mysqli_fetch_assoc($posts)) {
+            $postsList[] = $post;
+        }
+        echo json_encode($postsList);
+    }
+
+
     public static function delTag($connection, $tag_title){
         $connection->query("DELETE FROM tags_list WHERE tags_list.tag_title = '$tag_title'");
         $connection->query("ALTER TABLE `tags` DROP COLUMN $tag_title");

@@ -46,5 +46,8 @@ switch ($method_type){
     case "user":
         require_once __DIR__. "/Entity/User.php";
         break;
+    case "vendor":
+        require_once __DIR__ . "/Entity/Vendor.php";
+        break;
 }
 

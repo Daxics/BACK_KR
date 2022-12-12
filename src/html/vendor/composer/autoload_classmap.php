@@ -9,7 +9,7 @@ return array(
     'App\\Services\\Page' => $baseDir . '/app/Services/Page.php',
     'App\\Services\\Router' => $baseDir . '/app/Services/Router.php',
     'App\\Tables\\Author' => $baseDir . '/app/Tables/Author.php',
-    'App\\Tables\\Base_API' => $baseDir . '/app/Tables/Base_API.php',
+    'App\\Tables\\Base_API' => $baseDir . '/app/Tables/Vendor.php',
     'App\\Tables\\Comment' => $baseDir . '/app/Tables/Comment.php',
     'App\\Tables\\Post' => $baseDir . '/app/Tables/Post.php',
     'App\\Tables\\Role' => $baseDir . '/app/Tables/Role.php',

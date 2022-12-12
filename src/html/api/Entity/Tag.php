@@ -6,7 +6,7 @@ use App\Tables\Tag;
 switch ($method){
     case 'GET':
         if(isset($id)){
-
+            Tag::getPostsTags($connect, $id);
         } else {
             Tag::getTags($connect);
         }

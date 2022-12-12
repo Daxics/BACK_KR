@@ -6,10 +6,12 @@ use App\Tables\Registration;
 
 switch ($method){
     case 'GET':
-        if(isset($id)){
-            User::get_user($connect, $id);
-        } else {
-
+        if (isset($id)){
+            if (isset($_GET['s'])){
+                User::get_users_posts($connect, $id, $_GET['s']);
+            } else {
+                User::get_user($connect, $id);
+            }
         }
         break;
     case 'POST':

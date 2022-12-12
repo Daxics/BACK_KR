@@ -1,3 +1,6 @@
+let p_c = 5;
+
+
 $(document).ready(function () {
     let id = $('.user-info').attr('id');
     console.log(id);
@@ -10,17 +13,62 @@ $(document).ready(function () {
             $('.date').text(main.dateTime);
             $('.level').text(main.role);
             $('.uploads').text(main.posts_count);
+            p_c = main.posts_count;
+            // console.log(main.posts_count)
             $('.comments').text(main.comments_count);
+
+
+
+
+
+
+
+
+            $(function () {
+                window.pagObj = $('#pagination').twbsPagination({
+                    totalPages: Math.ceil(p_c/10),
+                    visiblePages: 10,
+                    onPageClick: function (event, page) {
+                        console.info(page + ' (from options)');
+                        let id_u = $('.user-info').attr('id');
+                        $('#posts-list').empty();
+                        $.getJSON(
+                            'http://localhost:8000/api/user/' + id_u + '?s=' + (page-1)*10,
+                            function (posts) {
+                                posts.forEach((post) => {
+                                    let newImage = $(`
+                    <a href="/post?id=${post.id_post}" class="m-1 images">
+                            <img
+                                src="http://localhost:8000/api/${post.img}"
+                                class="card bd-placeholder-img
+                                rounded float-start"
+                                style="width: 11rem"
+                                alt="${post.img_name}">
+                        </a>
+                `);
+                                    $('.posts-list').append(newImage);
+                                })
+                            }
+                        );
+                    }
+                }).on('page', function (event, page) {
+                    console.info(page + ' (from event listening)');
+                });
+            });
+
+
+
+
+
+
+
+
         }
     );
 });
 
 
-$('.navbar-nav .user').each(function () {
-    let id = $('.user-info').attr('id');
-    let hr = $(this).attr('href').split("?")[1].split('&')[0].split('=')[1];
-    console.log(hr);
-    if (hr !== id) {
-        $(this).removeClass("text-primary");
-    }
-});
+
+
+
+

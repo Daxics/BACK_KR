@@ -42,6 +42,15 @@ class Character
         echo json_encode($postsList);
     }
 
+    public static function getPostsCharacters($connection, $id){
+        $posts = $connection->query("SELECT * FROM characters WHERE id_post = $id");
+        $postsList = [];
+        while ($post = mysqli_fetch_assoc($posts)) {
+            $postsList[] = $post;
+        }
+        echo json_encode($postsList);
+    }
+
     public static function delCharacter($connection, $character_title){
         $connection->query("DELETE FROM characters_list WHERE characters_list.character_title = '$character_title'");
         $connection->query("ALTER TABLE `characters` DROP COLUMN $character_title");

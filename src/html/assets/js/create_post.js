@@ -10,8 +10,8 @@ $(document).ready(function () {
         'http://localhost:8000/api/author?t=authors',
         function (authors) {
             $.each(authors, function () {
-                let mid_test = this['author'];
-                authors_list.push(mid_test)
+                let mid_text = this['author'];
+                authors_list.push(mid_text)
                 $('.js-example').select2({
                     width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
                     allowClear: Boolean($(this).data('allow-clear')),
@@ -66,44 +66,6 @@ $(document).ready(function () {
     );
 });
 
-$('.first-search .form-control').keyup(function (e){
-    let a = $(this).val().toLowerCase();
-    if (a != ''){
-        $('.first-list .list-group-item').each(function (){
-            let inner_label_text = $(this.children[1]).html().toLowerCase(),
-                sex = $(this.children[0]).is(':checked');
-            if ((inner_label_text.search(a) == -1) && !sex){
-                $(this).addClass('hide');
-            } else {
-                $(this).removeClass('hide');
-            }
-        });
-    } else {
-        $('.first-list .list-group-item').each(function () {
-                $(this).removeClass('hide');
-        });
-    }
-});
-
-$('.third-search .form-control').keyup(function (e){
-    let a = $(this).val().toLowerCase();
-    if (a != ''){
-        $('.third-list .list-group-item').each(function (){
-            let inner_label_text = $(this.children[1]).html().toLowerCase(),
-                sex = $(this.children[0]).is(':checked');
-
-            if ((inner_label_text.search(a) == -1) && !sex){
-                $(this).addClass('hide');
-            } else {
-                $(this).removeClass('hide');
-            }
-        });
-    } else {
-        $('.third-list .list-group-item').each(function () {
-            $(this).removeClass('hide');
-        });
-    }
-});
 
 let file = false;
 $('[name="file"]').change(function (e){
@@ -178,23 +140,6 @@ $('.post-form .submit').click(function (e) {
                 $('.msg').removeClass('d-none').text(data.message);
             }
         },
-        error: function (jqXHR, exception) {
-            if (jqXHR.status === 0) {
-                alert('Not connect. Verify Network.');
-            } else if (jqXHR.status == 404) {
-                alert('Requested page not found (404).');
-            } else if (jqXHR.status == 500) {
-                alert('Internal Server Error (500).');
-            } else if (exception === 'parsererror') {
-                alert('Requested JSON parse failed.');
-            } else if (exception === 'timeout') {
-                alert('Time out error.');
-            } else if (exception === 'abort') {
-                alert('Ajax request aborted.');
-            } else {
-                alert('Uncaught Error. ' + jqXHR.responseText);
-            }
-        }
     });
 });
 

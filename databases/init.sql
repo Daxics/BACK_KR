@@ -14,7 +14,7 @@ USE appDB;
 
 CREATE TABLE  IF NOT EXISTS `users` (
 	`id_user` INTEGER(40) AUTO_INCREMENT NOT NULL,
-	`id_role` INTEGER(3) DEFAULT '1',
+	`id_role` INTEGER(3) DEFAULT 2,
 	`nickName` VARCHAR(100),
 	`e_mail` VARCHAR(255),
 	`password` VARCHAR(200),
@@ -30,17 +30,17 @@ CREATE TABLE  IF NOT EXISTS `users` (
 --
 -- ---
 
-CREATE TABLE IF NOT EXISTS `posts` (
-	`id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
-	`id_user` INTEGER(20),
-	`id_author` INTEGER(20),
-	`source` VARCHAR(200),
-	`disc` VARCHAR(200),
-    `img_name` VARCHAR(20),
-    `img` VARCHAR(200),
-    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (`id_post`)
-);
+    CREATE TABLE IF NOT EXISTS `posts` (
+        `id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
+        `id_user` INTEGER(20),
+        `id_author` INTEGER(20),
+        `source` VARCHAR(200),
+        `disc` VARCHAR(1000),
+        `img_name` VARCHAR(20),
+        `img` VARCHAR(200),
+        `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (`id_post`)
+    );
 
 -- ---
 -- Table 'comments'
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
 );
 
 CREATE TABLE IF NOT EXISTS `characters_list` (
-`character_title` VARCHAR(100) NOT NULL,
+    `character_title` VARCHAR(100) NOT NULL,
     `count` INTEGER(40) NOT NULL DEFAULT 0,
     PRIMARY KEY (`character_title`)
 );
@@ -189,7 +189,7 @@ DELIMITER ;
 -- Foreign Keys
 -- ---
 ALTER TABLE `users` ADD FOREIGN KEY (id_role) REFERENCES `roles` (`id_role`);
-ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE CASCADE;
+ALTER TABLE `posts` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE SET NULL;
 ALTER TABLE `posts` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author`) ON DELETE SET NULL;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE SET NULL;
@@ -223,47 +223,36 @@ ALTER TABLE `count_posts` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 INSERT INTO `authors` (`author`) VALUES
     ('Yang Do');
 INSERT INTO `roles` (`role`) VALUES
+    ('Admin');
+INSERT INTO `roles` (`role`) VALUES
     ('RegUser');
+
 INSERT INTO `count_posts` (id) VALUE
     (1);
 
 INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('anime', 1);
+    ('anime', 0);
 INSERT INTO `tags_list` (tag_title, count) VALUE
     ('biography', 0);
 INSERT INTO `tags_list` (tag_title, count) VALUE
     ('actions', 0);
 INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('western', 1);
+    ('western', 0);
 INSERT INTO `tags_list` (tag_title, count) VALUE
     ('military', 0);
 
 INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Rin',1);
+    ('Rin',0);
 INSERT INTO `characters_list` (character_title,count) VALUES
     ('Ishtar',0);
 INSERT INTO `characters_list` (character_title,count) VALUES
     ('Ereshkigal',0);
 INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Saber',1);
+    ('Saber',0);
 INSERT INTO `characters_list` (character_title,count) VALUES
     ('Illya',0);
 
 INSERT INTO `users` (`id_role`,`nickName`,`e_mail`,`password`) VALUES
     (1,'User','user@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');
-
-INSERT INTO `posts` ( id_user, id_author, disc, img_name, img) VALUES
-    (1,1,'sex instructor',NULL,NULL);
-
-
-INSERT INTO `tags` (id_post, anime, biography, actions, western, military) VALUES
-    (1,1,0,0,1,0);
-
-INSERT INTO `characters` (id_post, Rin, Ishtar, Ereshkigal, Saber, Illya) VALUES
-    (1,0,0,0,1,0);
-
-
-INSERT INTO `comments` (`id_comment`,`id_post`,`id_user`,`text`) VALUES
-    (NULL,1,1,'Yasosu bibu');
 
 

@@ -6,7 +6,7 @@ use App\Tables\Character;
 switch ($method){
     case 'GET':
         if(isset($id)){
-
+            Character::getPostsCharacters($connect, $id);
         } else {
             Character::getCharacters($connect);
         }

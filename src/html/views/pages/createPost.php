@@ -41,7 +41,7 @@ if (empty($_SESSION['user'])) {
                    accept="image/png, image/jpeg, image/bmp" name="file">
         </div>
         <div class="form-floating">
-                    <textarea class="form-control text-area" placeholder="Leave a comment
+                    <textarea class="form-control text-area"  maxlength="200" placeholder="Leave a comment
                         here" id="floatingTextarea2" style="min-height: 100px" name="disc"></textarea>
             <label for="floatingTextarea2">Description</label>
         </div>
@@ -98,6 +98,7 @@ if (empty($_SESSION['user'])) {
 
 <?php Page::part('scripts'); ?>
 <script src="/assets/js/create_post.js"></script>
+<script src="/assets/js/form.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </body>

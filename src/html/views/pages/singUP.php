@@ -18,7 +18,7 @@ use App\Services\Page;
 <?php Page::part('navbar'); ?>
 
 <form class="position-absolute top-50 start-50
-            translate-middle border border-2 rounded p-3 js-form"  style="min-width: 30rem;">
+            translate-middle border border-1 bg-light rounded p-3 js-form"  style="min-width: 30rem;">
     <h1 class="mt-2 mb-3">Sign Up</h1>
     <div class="mb-3">
         <label class="form-label">Username</label>
