@@ -6989,3 +6989,434 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Mon Dec 12 20:59:32.368918 2022] [dbd:error] [pid 149] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
 [Mon Dec 12 20:59:32.369673 2022] [dbd:error] [pid 149] (20014)Internal error (specific information not available): AH00633: failed to initialise
 [Mon Dec 12 20:59:32.370337 2022] [dbd:crit] [pid 149] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 21:50:09.645251 2022] [dbd:error] [pid 150] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 21:50:09.667957 2022] [dbd:error] [pid 150] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 21:50:09.692845 2022] [dbd:crit] [pid 150] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:12:07.564072 2022] [php:warn] [pid 139] [client 172.19.0.1:55902] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:12:07.566002 2022] [php:error] [pid 139] [client 172.19.0.1:55902] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:32\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '2')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 32, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:14:21.607490 2022] [php:warn] [pid 138] [client 172.19.0.1:58242] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:14:21.612856 2022] [php:error] [pid 138] [client 172.19.0.1:58242] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '2')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:14:22.155755 2022] [dbd:error] [pid 151] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:14:22.156674 2022] [dbd:error] [pid 151] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:14:22.157136 2022] [dbd:crit] [pid 151] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:14:57.196001 2022] [dbd:error] [pid 152] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:14:57.199018 2022] [dbd:error] [pid 152] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:14:57.203785 2022] [dbd:crit] [pid 152] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:14:57.489360 2022] [php:warn] [pid 149] [client 172.19.0.1:62508] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:14:57.496997 2022] [php:error] [pid 149] [client 172.19.0.1:62508] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '2')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:15:08.711256 2022] [php:warn] [pid 141] [client 172.19.0.1:55478] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:15:08.712306 2022] [php:error] [pid 141] [client 172.19.0.1:55478] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '2')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:15:15.502013 2022] [php:warn] [pid 146] [client 172.19.0.1:57250] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:15:15.504498 2022] [php:error] [pid 146] [client 172.19.0.1:57250] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '2')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 22:15:34.427414 2022] [php:warn] [pid 139] [client 172.19.0.1:58280] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9
+[Mon Dec 12 22:15:34.427989 2022] [php:error] [pid 139] [client 172.19.0.1:58280] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '1')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33
+[Mon Dec 12 22:16:50.434984 2022] [php:warn] [pid 138] [client 172.19.0.1:59954] PHP Warning:  Undefined variable $comments in /var/www/html/api/Entity/Comment.php on line 9
+[Mon Dec 12 22:16:50.437869 2022] [php:error] [pid 138] [client 172.19.0.1:59954] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /var/www/html/app/Tables/Comment.php:33\nStack trace:\n#0 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(NULL, '1')\n#1 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#2 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 33
+[Mon Dec 12 22:17:31.362581 2022] [dbd:error] [pid 153] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:17:31.366153 2022] [dbd:error] [pid 153] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:17:31.368702 2022] [dbd:crit] [pid 153] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:17:32.363426 2022] [dbd:error] [pid 154] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:17:32.364623 2022] [dbd:error] [pid 155] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:17:32.365342 2022] [dbd:error] [pid 154] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:17:32.366496 2022] [dbd:crit] [pid 154] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:17:32.365878 2022] [dbd:error] [pid 155] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:17:32.367958 2022] [dbd:crit] [pid 155] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:18:34.430716 2022] [dbd:error] [pid 156] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:18:34.431458 2022] [dbd:error] [pid 156] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:18:34.432043 2022] [dbd:crit] [pid 156] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:19:13.471787 2022] [dbd:error] [pid 157] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:19:13.472546 2022] [dbd:error] [pid 157] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:19:13.473141 2022] [dbd:crit] [pid 157] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:19:39.497481 2022] [dbd:error] [pid 158] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:19:39.512791 2022] [dbd:error] [pid 158] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:19:39.530462 2022] [dbd:crit] [pid 158] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:19:55.514742 2022] [dbd:error] [pid 159] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:19:55.520580 2022] [dbd:error] [pid 159] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:19:55.522160 2022] [dbd:crit] [pid 159] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:26:01.809621 2022] [php:error] [pid 157] [client 172.19.0.1:59194] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'role' in 'field list' in /var/www/html/app/Tables/Comment.php:35\nStack trace:\n#0 /var/www/html/app/Tables/Comment.php(35): mysqli->query('SELECT comments...')\n#1 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(Object(mysqli), '2')\n#2 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 35
+[Mon Dec 12 22:31:24.493251 2022] [php:error] [pid 159] [client 172.19.0.1:56956] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM comments\r\n                                            INNER JOIN users\r\n   ' at line 1 in /var/www/html/app/Tables/Comment.php:37\nStack trace:\n#0 /var/www/html/app/Tables/Comment.php(37): mysqli->query('SELECT comments...')\n#1 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(Object(mysqli), '2')\n#2 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 37
+[Mon Dec 12 22:31:33.624428 2022] [php:error] [pid 138] [client 172.19.0.1:57112] PHP Fatal error:  Uncaught ArgumentCountError: array_push() does not accept unknown named parameters in /var/www/html/app/Tables/Comment.php:44\nStack trace:\n#0 /var/www/html/app/Tables/Comment.php(44): array_push(Array, role: 0)\n#1 /var/www/html/api/Entity/Comment.php(9): App\\Tables\\Comment::getPostsComments(Object(mysqli), '2')\n#2 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 44
+[Mon Dec 12 22:35:43.542321 2022] [dbd:error] [pid 160] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:35:43.548823 2022] [dbd:error] [pid 160] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:35:43.554095 2022] [dbd:crit] [pid 160] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:37:23.645100 2022] [dbd:error] [pid 161] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:37:23.648607 2022] [dbd:error] [pid 161] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:37:23.650644 2022] [dbd:crit] [pid 161] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:37:49.673605 2022] [dbd:error] [pid 162] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:37:49.674377 2022] [dbd:error] [pid 162] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:37:49.674900 2022] [dbd:crit] [pid 162] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:38:29.717038 2022] [dbd:error] [pid 163] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:38:29.718057 2022] [dbd:error] [pid 163] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:38:29.718866 2022] [dbd:crit] [pid 163] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:39:56.810699 2022] [dbd:error] [pid 164] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:39:56.811357 2022] [dbd:error] [pid 164] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:39:56.811948 2022] [dbd:crit] [pid 164] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:39:57.812792 2022] [dbd:error] [pid 165] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:39:57.813655 2022] [dbd:error] [pid 165] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:39:57.813704 2022] [dbd:error] [pid 166] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:39:57.814867 2022] [dbd:crit] [pid 165] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:39:57.815427 2022] [dbd:error] [pid 166] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:39:57.816627 2022] [dbd:crit] [pid 166] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:44:29.114722 2022] [dbd:error] [pid 167] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:44:29.115608 2022] [dbd:error] [pid 167] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:44:29.116077 2022] [dbd:crit] [pid 167] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:44:44.118271 2022] [dbd:error] [pid 168] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:44:44.119019 2022] [dbd:error] [pid 168] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:44:44.119452 2022] [dbd:crit] [pid 168] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:44:54.131530 2022] [dbd:error] [pid 169] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:44:54.141176 2022] [dbd:error] [pid 169] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:44:54.144030 2022] [dbd:crit] [pid 169] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:53:03.672463 2022] [dbd:error] [pid 170] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:53:03.674726 2022] [dbd:error] [pid 170] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:53:03.681870 2022] [dbd:crit] [pid 170] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:55:34.823735 2022] [dbd:error] [pid 171] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:55:34.825166 2022] [dbd:error] [pid 171] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:55:34.825844 2022] [dbd:crit] [pid 171] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:55:43.832700 2022] [dbd:error] [pid 172] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:55:43.836688 2022] [dbd:error] [pid 172] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:55:43.838134 2022] [dbd:crit] [pid 172] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 22:56:31.885968 2022] [dbd:error] [pid 173] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 22:56:31.886813 2022] [dbd:error] [pid 173] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 22:56:31.888203 2022] [dbd:crit] [pid 173] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:15:06.079814 2022] [dbd:error] [pid 174] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:15:06.080706 2022] [dbd:error] [pid 174] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:15:06.081413 2022] [dbd:crit] [pid 174] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:15:25.101254 2022] [dbd:error] [pid 175] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:15:25.104964 2022] [dbd:error] [pid 175] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:15:25.105952 2022] [dbd:crit] [pid 175] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:16:09.144828 2022] [dbd:error] [pid 176] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:16:09.145755 2022] [dbd:error] [pid 176] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:16:09.146330 2022] [dbd:crit] [pid 176] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:17:21.226319 2022] [dbd:error] [pid 177] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:17:21.230133 2022] [dbd:error] [pid 177] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:17:21.243424 2022] [dbd:crit] [pid 177] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:24:13.668762 2022] [dbd:error] [pid 178] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:24:13.680020 2022] [dbd:error] [pid 178] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:24:13.683655 2022] [dbd:crit] [pid 178] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:25:26.751375 2022] [dbd:error] [pid 179] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:25:26.757875 2022] [dbd:error] [pid 179] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:25:26.769500 2022] [dbd:crit] [pid 179] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:25:40.767124 2022] [dbd:error] [pid 180] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:25:40.781903 2022] [dbd:error] [pid 180] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:25:40.790698 2022] [dbd:crit] [pid 180] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:26:22.812543 2022] [dbd:error] [pid 181] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:26:22.814735 2022] [dbd:error] [pid 181] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:26:22.815838 2022] [dbd:crit] [pid 181] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:26:44.850548 2022] [dbd:error] [pid 182] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:26:44.857827 2022] [dbd:error] [pid 182] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:26:44.863667 2022] [dbd:crit] [pid 182] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:28:39.969581 2022] [dbd:error] [pid 183] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:28:39.970381 2022] [dbd:error] [pid 183] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:28:39.971103 2022] [dbd:crit] [pid 183] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:29:52.053100 2022] [dbd:error] [pid 184] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:29:52.056341 2022] [dbd:error] [pid 184] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:29:52.063556 2022] [dbd:crit] [pid 184] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:30:55.118578 2022] [dbd:error] [pid 185] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:30:55.173492 2022] [dbd:error] [pid 185] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:30:55.178700 2022] [dbd:crit] [pid 185] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:31:15.169948 2022] [dbd:error] [pid 186] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:31:15.173739 2022] [dbd:error] [pid 186] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:31:15.184273 2022] [dbd:crit] [pid 186] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:31:40.184623 2022] [dbd:error] [pid 187] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:31:40.185514 2022] [dbd:error] [pid 187] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:31:40.186117 2022] [dbd:crit] [pid 187] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:32:23.234215 2022] [dbd:error] [pid 188] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:32:23.235433 2022] [dbd:error] [pid 188] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:32:23.236588 2022] [dbd:crit] [pid 188] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:35:21.414844 2022] [dbd:error] [pid 189] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:35:21.417510 2022] [dbd:error] [pid 189] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:35:21.419532 2022] [dbd:crit] [pid 189] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:35:33.428840 2022] [dbd:error] [pid 190] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:35:33.444736 2022] [dbd:error] [pid 190] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:35:33.469790 2022] [dbd:crit] [pid 190] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:35:48.446342 2022] [dbd:error] [pid 191] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:35:48.449691 2022] [dbd:error] [pid 191] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:35:48.452495 2022] [dbd:crit] [pid 191] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:36:07.470430 2022] [dbd:error] [pid 192] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:36:07.498017 2022] [dbd:error] [pid 192] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:36:07.506646 2022] [dbd:crit] [pid 192] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:36:26.494218 2022] [dbd:error] [pid 193] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:36:26.520693 2022] [dbd:error] [pid 193] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:36:26.546611 2022] [dbd:crit] [pid 193] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:36:38.507234 2022] [dbd:error] [pid 194] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:36:38.518209 2022] [dbd:error] [pid 194] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:36:38.521148 2022] [dbd:crit] [pid 194] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:37:13.543250 2022] [dbd:error] [pid 195] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:37:13.544493 2022] [dbd:error] [pid 195] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:37:13.546063 2022] [dbd:crit] [pid 195] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:37:39.572336 2022] [dbd:error] [pid 196] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:37:39.588737 2022] [dbd:error] [pid 196] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:37:39.592487 2022] [dbd:crit] [pid 196] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:38:50.655083 2022] [dbd:error] [pid 197] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:38:50.669762 2022] [dbd:error] [pid 197] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:38:50.697261 2022] [dbd:crit] [pid 197] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:40:51.779916 2022] [dbd:error] [pid 198] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:40:51.782779 2022] [dbd:error] [pid 198] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:40:51.783569 2022] [dbd:crit] [pid 198] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:42:33.889709 2022] [dbd:error] [pid 199] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:42:33.890627 2022] [dbd:error] [pid 199] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:42:33.891317 2022] [dbd:crit] [pid 199] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:43:07.931217 2022] [dbd:error] [pid 200] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:43:07.939450 2022] [dbd:error] [pid 200] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:43:07.946762 2022] [dbd:crit] [pid 200] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:43:23.943378 2022] [dbd:error] [pid 201] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:43:23.967714 2022] [dbd:error] [pid 201] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:43:23.978061 2022] [dbd:crit] [pid 201] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:44:01.987473 2022] [dbd:error] [pid 202] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:44:02.010682 2022] [dbd:error] [pid 202] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:44:02.053058 2022] [dbd:crit] [pid 202] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:44:46.036632 2022] [dbd:error] [pid 203] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:44:46.038725 2022] [dbd:error] [pid 203] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:44:46.039391 2022] [dbd:crit] [pid 203] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:44:59.050002 2022] [dbd:error] [pid 204] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:44:59.051261 2022] [dbd:error] [pid 204] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:44:59.054749 2022] [dbd:crit] [pid 204] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:45:11.140667 2022] [dbd:error] [pid 205] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:45:11.153589 2022] [dbd:error] [pid 205] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:45:11.174001 2022] [dbd:crit] [pid 205] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:45:29.161128 2022] [dbd:error] [pid 206] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:45:29.175471 2022] [dbd:error] [pid 206] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:45:29.189803 2022] [dbd:crit] [pid 206] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:45:45.103138 2022] [dbd:error] [pid 207] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:45:45.110754 2022] [dbd:error] [pid 207] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:45:45.119099 2022] [dbd:crit] [pid 207] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:48:30.232623 2022] [dbd:error] [pid 208] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:48:30.236427 2022] [dbd:error] [pid 208] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:48:30.237156 2022] [dbd:crit] [pid 208] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:49:16.279968 2022] [dbd:error] [pid 209] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:49:16.302982 2022] [dbd:error] [pid 209] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:49:16.304173 2022] [dbd:crit] [pid 209] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:51:44.432671 2022] [dbd:error] [pid 210] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:51:44.433649 2022] [dbd:error] [pid 210] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:51:44.434284 2022] [dbd:crit] [pid 210] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:52:02.452595 2022] [dbd:error] [pid 211] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:52:02.488066 2022] [dbd:error] [pid 211] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:52:02.515478 2022] [dbd:crit] [pid 211] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:52:24.477251 2022] [dbd:error] [pid 212] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:52:24.478429 2022] [dbd:error] [pid 212] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:52:24.479321 2022] [dbd:crit] [pid 212] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:52:40.497073 2022] [dbd:error] [pid 213] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:52:40.503929 2022] [dbd:error] [pid 213] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:52:40.505541 2022] [dbd:crit] [pid 213] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:54:31.829522 2022] [php:warn] [pid 167] [client 172.19.0.1:55690] PHP Warning:  Undefined variable $id in /var/www/html/api/Entity/Comment.php on line 24, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 23:54:31.830369 2022] [php:error] [pid 167] [client 172.19.0.1:55690] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /var/www/html/app/Tables/Comment.php:59\nStack trace:\n#0 /var/www/html/app/Tables/Comment.php(59): mysqli->query('DELETE FROM com...')\n#1 /var/www/html/api/Entity/Comment.php(24): App\\Tables\\Comment::delComment(Object(mysqli), NULL)\n#2 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 59, referer: http://localhost:8000/post?id=2
+[Mon Dec 12 23:55:12.654222 2022] [dbd:error] [pid 214] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:55:12.672886 2022] [dbd:error] [pid 214] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:55:12.701575 2022] [dbd:crit] [pid 214] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:55:37.681799 2022] [dbd:error] [pid 215] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:55:37.702450 2022] [dbd:error] [pid 215] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:55:37.748064 2022] [dbd:crit] [pid 215] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Mon Dec 12 23:57:41.798970 2022] [dbd:error] [pid 216] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Mon Dec 12 23:57:41.814434 2022] [dbd:error] [pid 216] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Mon Dec 12 23:57:41.816450 2022] [dbd:crit] [pid 216] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:07:05.405670 2022] [dbd:error] [pid 217] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:07:05.421213 2022] [dbd:error] [pid 217] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:07:05.440639 2022] [dbd:crit] [pid 217] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:07:21.425669 2022] [dbd:error] [pid 218] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:07:21.443200 2022] [dbd:error] [pid 218] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:07:21.461857 2022] [dbd:crit] [pid 218] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:07:47.449828 2022] [dbd:error] [pid 219] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:07:47.452031 2022] [dbd:error] [pid 219] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:07:47.453026 2022] [dbd:crit] [pid 219] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:08:10.475062 2022] [dbd:error] [pid 220] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:08:10.479781 2022] [dbd:error] [pid 220] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:08:10.482509 2022] [dbd:crit] [pid 220] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:08:21.488087 2022] [dbd:error] [pid 221] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:08:21.512892 2022] [dbd:error] [pid 221] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:08:21.523827 2022] [dbd:crit] [pid 221] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:08:38.506237 2022] [dbd:error] [pid 222] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:08:38.522505 2022] [dbd:error] [pid 222] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:08:38.543040 2022] [dbd:crit] [pid 222] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:14:21.848325 2022] [dbd:error] [pid 223] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:14:21.850017 2022] [dbd:error] [pid 223] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:14:21.852270 2022] [dbd:crit] [pid 223] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:14:40.870531 2022] [dbd:error] [pid 224] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:14:40.875648 2022] [dbd:error] [pid 224] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:14:40.880205 2022] [dbd:crit] [pid 224] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:15:15.908503 2022] [dbd:error] [pid 225] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:15:15.919261 2022] [dbd:error] [pid 225] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:15:15.922755 2022] [dbd:crit] [pid 225] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:17:46.074542 2022] [dbd:error] [pid 226] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:17:46.113807 2022] [dbd:error] [pid 226] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:17:46.147105 2022] [dbd:crit] [pid 226] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:18:14.107023 2022] [dbd:error] [pid 227] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:18:14.117949 2022] [dbd:error] [pid 227] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:18:14.218090 2022] [dbd:crit] [pid 227] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:19:36.198341 2022] [dbd:error] [pid 228] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:19:36.204093 2022] [dbd:error] [pid 228] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:19:36.213678 2022] [dbd:crit] [pid 228] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:19:41.263537 2022] [php:error] [pid 227] [client 172.19.0.1:65138] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'delete' at line 1 in /var/www/html/app/Tables/Comment.php:59\nStack trace:\n#0 /var/www/html/app/Tables/Comment.php(59): mysqli->query('DELETE FROM com...')\n#1 /var/www/html/api/Entity/Comment.php(24): App\\Tables\\Comment::delComment(Object(mysqli), 'delete')\n#2 /var/www/html/api/index.php(38): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Comment.php on line 59, referer: http://localhost:8000/post?id=2
+[Tue Dec 13 00:28:11.744821 2022] [dbd:error] [pid 229] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:28:11.762621 2022] [dbd:error] [pid 229] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:28:11.775626 2022] [dbd:crit] [pid 229] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:29:21.801632 2022] [dbd:error] [pid 230] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:29:21.811324 2022] [dbd:error] [pid 230] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:29:21.822239 2022] [dbd:crit] [pid 230] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:29:37.819181 2022] [dbd:error] [pid 231] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:29:37.842678 2022] [dbd:error] [pid 231] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:29:37.858964 2022] [dbd:crit] [pid 231] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:30:29.878160 2022] [dbd:error] [pid 232] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:30:29.898970 2022] [dbd:error] [pid 232] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:30:29.906868 2022] [dbd:crit] [pid 232] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:31:01.915339 2022] [dbd:error] [pid 233] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:31:01.916437 2022] [dbd:error] [pid 233] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:31:01.917110 2022] [dbd:crit] [pid 233] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:31:20.946611 2022] [dbd:error] [pid 234] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:31:20.969248 2022] [dbd:error] [pid 234] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:31:20.988350 2022] [dbd:crit] [pid 234] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:33:29.076122 2022] [dbd:error] [pid 235] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:33:29.096999 2022] [dbd:error] [pid 235] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:33:29.108147 2022] [dbd:crit] [pid 235] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:33:54.104153 2022] [dbd:error] [pid 236] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:33:54.110906 2022] [dbd:error] [pid 236] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:33:54.122264 2022] [dbd:crit] [pid 236] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:34:17.160980 2022] [dbd:error] [pid 237] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:34:17.163328 2022] [dbd:error] [pid 237] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:34:17.165167 2022] [dbd:crit] [pid 237] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:34:45.163476 2022] [dbd:error] [pid 238] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:34:45.166568 2022] [dbd:error] [pid 238] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:34:45.169154 2022] [dbd:crit] [pid 238] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:43:51.746569 2022] [dbd:error] [pid 239] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:43:51.748455 2022] [dbd:error] [pid 239] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:43:51.753688 2022] [dbd:crit] [pid 239] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:43:56.422093 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name" in /var/www/html/app/Tables/Post.php on line 226, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.423385 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name_old" in /var/www/html/app/Tables/Post.php on line 227, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.424156 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "src" in /var/www/html/app/Tables/Post.php on line 228, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.425034 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "disc" in /var/www/html/app/Tables/Post.php on line 230, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.425708 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "tags_arr" in /var/www/html/app/Tables/Post.php on line 231, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.426314 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "characters_arr" in /var/www/html/app/Tables/Post.php on line 232, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:43:56.426851 2022] [php:error] [pid 222] [client 172.19.0.1:56922] PHP Fatal error:  Uncaught TypeError: implode(): Argument #1 ($pieces) must be of type array, string given in /var/www/html/app/Tables/Post.php:233\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(233): implode(',', NULL)\n#1 /var/www/html/api/Entity/Post.php(22): App\\Tables\\Post::patchPost(Object(mysqli), Array, '1')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 233, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.260930 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name" in /var/www/html/app/Tables/Post.php on line 226, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.262478 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name_old" in /var/www/html/app/Tables/Post.php on line 227, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.263407 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "src" in /var/www/html/app/Tables/Post.php on line 228, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.264343 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "disc" in /var/www/html/app/Tables/Post.php on line 230, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.264942 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "tags_arr" in /var/www/html/app/Tables/Post.php on line 231, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.265594 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "characters_arr" in /var/www/html/app/Tables/Post.php on line 232, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.266316 2022] [php:error] [pid 222] [client 172.19.0.1:56922] PHP Fatal error:  Uncaught TypeError: implode(): Argument #1 ($pieces) must be of type array, string given in /var/www/html/app/Tables/Post.php:233\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(233): implode(',', NULL)\n#1 /var/www/html/api/Entity/Post.php(22): App\\Tables\\Post::patchPost(Object(mysqli), Array, '1')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 233, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.678253 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name" in /var/www/html/app/Tables/Post.php on line 226, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.679548 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "author_name_old" in /var/www/html/app/Tables/Post.php on line 227, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.680152 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "src" in /var/www/html/app/Tables/Post.php on line 228, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.680728 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "disc" in /var/www/html/app/Tables/Post.php on line 230, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.681380 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "tags_arr" in /var/www/html/app/Tables/Post.php on line 231, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.682035 2022] [php:warn] [pid 222] [client 172.19.0.1:56922] PHP Warning:  Undefined array key "characters_arr" in /var/www/html/app/Tables/Post.php on line 232, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:00.682704 2022] [php:error] [pid 222] [client 172.19.0.1:56922] PHP Fatal error:  Uncaught TypeError: implode(): Argument #1 ($pieces) must be of type array, string given in /var/www/html/app/Tables/Post.php:233\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(233): implode(',', NULL)\n#1 /var/www/html/api/Entity/Post.php(22): App\\Tables\\Post::patchPost(Object(mysqli), Array, '1')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 233, referer: http://localhost:8000/post?id=1
+[Tue Dec 13 00:44:19.778663 2022] [dbd:error] [pid 240] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:44:19.841657 2022] [dbd:error] [pid 240] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:44:19.849271 2022] [dbd:crit] [pid 240] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:44:51.814999 2022] [dbd:error] [pid 241] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:44:51.832887 2022] [dbd:error] [pid 241] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:44:51.834239 2022] [dbd:crit] [pid 241] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:46:09.918859 2022] [dbd:error] [pid 242] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:46:09.922168 2022] [dbd:error] [pid 242] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:46:09.922872 2022] [dbd:crit] [pid 242] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:46:34.940939 2022] [dbd:error] [pid 243] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:46:34.971162 2022] [dbd:error] [pid 243] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:46:34.994712 2022] [dbd:crit] [pid 243] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:47:57.027818 2022] [dbd:error] [pid 244] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:47:57.070686 2022] [dbd:error] [pid 244] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:47:57.073179 2022] [dbd:crit] [pid 244] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:50:00.159021 2022] [dbd:error] [pid 245] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:50:00.184929 2022] [dbd:error] [pid 245] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:50:00.242653 2022] [dbd:crit] [pid 245] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:51:16.245215 2022] [dbd:error] [pid 246] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:51:16.261924 2022] [dbd:error] [pid 246] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:51:16.263061 2022] [dbd:crit] [pid 246] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 00:53:51.411281 2022] [dbd:error] [pid 247] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 00:53:51.412907 2022] [dbd:error] [pid 247] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 00:53:51.413746 2022] [dbd:crit] [pid 247] (20014)Internal error (specific information not available): AH00636: child init failed!
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 13 10:18:33.108228 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.0 configured -- resuming normal operations
+[Tue Dec 13 10:18:33.108774 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Dec 13 10:18:33.114793 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 10:18:33.115280 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:33.115151 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 10:18:33.117468 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:33.115525 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 10:18:33.118093 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:33.116742 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 10:18:33.116998 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:33.117466 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 10:18:33.117816 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:33.118363 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:33.118816 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:33.121102 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:33.119613 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:33.121801 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:57.781246 2022] [php:warn] [pid 19] [client 172.19.0.1:55642] PHP Warning:  Undefined array key "user" in /var/www/html/views/pages/createPost.php on line 21
+[Tue Dec 13 10:18:57.782025 2022] [php:warn] [pid 19] [client 172.19.0.1:55642] PHP Warning:  Trying to access array offset on value of type null in /var/www/html/views/pages/createPost.php on line 21
+[Tue Dec 13 10:18:58.158331 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:18:58.165811 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:58.166697 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:59.139454 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:18:59.140126 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:59.140702 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:18:59.140373 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:18:59.141757 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:18:59.142193 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:19:14.149392 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:19:14.151031 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:19:14.152624 2022] [dbd:crit] [pid 25] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:21:29.296679 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:21:29.297608 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:21:29.298112 2022] [dbd:crit] [pid 26] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:22:07.336457 2022] [dbd:error] [pid 27] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:22:07.342479 2022] [dbd:error] [pid 27] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:22:07.344733 2022] [dbd:crit] [pid 27] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:22:24.355581 2022] [dbd:error] [pid 28] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:22:24.358836 2022] [dbd:error] [pid 28] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:22:24.378023 2022] [dbd:crit] [pid 28] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:29:20.803263 2022] [dbd:error] [pid 29] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:29:20.808626 2022] [dbd:error] [pid 29] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:29:20.810401 2022] [dbd:crit] [pid 29] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:29:41.150693 2022] [php:warn] [pid 26] [client 172.19.0.1:58598] PHP Warning:  Undefined variable $posts in /var/www/html/app/Tables/Post.php on line 154
+[Tue Dec 13 10:29:41.151350 2022] [php:error] [pid 26] [client 172.19.0.1:58598] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, null given in /var/www/html/app/Tables/Post.php:154\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(154): mysqli_fetch_assoc(NULL)\n#1 /var/www/html/api/Entity/Post.php(11): App\\Tables\\Post::getSubtable(Object(mysqli), '0', '', Array, '')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 154
+[Tue Dec 13 10:29:57.804955 2022] [php:warn] [pid 29] [client 172.19.0.1:55722] PHP Warning:  Undefined variable $posts in /var/www/html/app/Tables/Post.php on line 154, referer: http://localhost:8000/posts
+[Tue Dec 13 10:29:57.806582 2022] [php:error] [pid 29] [client 172.19.0.1:55722] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, null given in /var/www/html/app/Tables/Post.php:154\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(154): mysqli_fetch_assoc(NULL)\n#1 /var/www/html/api/Entity/Post.php(11): App\\Tables\\Post::getSubtable(Object(mysqli), '0', '', '', '')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 154, referer: http://localhost:8000/posts
+[Tue Dec 13 10:30:03.774635 2022] [php:warn] [pid 23] [client 172.19.0.1:64652] PHP Warning:  Undefined variable $posts in /var/www/html/app/Tables/Post.php on line 154, referer: http://localhost:8000/posts
+[Tue Dec 13 10:30:03.775484 2022] [php:error] [pid 23] [client 172.19.0.1:64652] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, null given in /var/www/html/app/Tables/Post.php:154\nStack trace:\n#0 /var/www/html/app/Tables/Post.php(154): mysqli_fetch_assoc(NULL)\n#1 /var/www/html/api/Entity/Post.php(11): App\\Tables\\Post::getSubtable(Object(mysqli), '0', '', '', '')\n#2 /var/www/html/api/index.php(41): require_once('/var/www/html/a...')\n#3 {main}\n  thrown in /var/www/html/app/Tables/Post.php on line 154, referer: http://localhost:8000/posts
+[Tue Dec 13 10:31:19.937523 2022] [dbd:error] [pid 30] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:31:19.942231 2022] [dbd:error] [pid 30] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:31:19.946466 2022] [dbd:crit] [pid 30] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 10:31:30.950531 2022] [dbd:error] [pid 31] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 10:31:30.952013 2022] [dbd:error] [pid 31] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 10:31:30.953419 2022] [dbd:crit] [pid 31] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 11:33:00.279882 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 13 12:10:06.990819 2022] [dbd:error] [pid 16] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 12:10:06.993649 2022] [dbd:error] [pid 16] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:10:06.991113 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.0 configured -- resuming normal operations
+[Tue Dec 13 12:10:06.995027 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Dec 13 12:10:06.994336 2022] [dbd:crit] [pid 16] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:10:07.002150 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 12:10:07.006675 2022] [dbd:error] [pid 18] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:10:07.002504 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 12:10:07.009982 2022] [dbd:error] [pid 17] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:10:07.007679 2022] [dbd:crit] [pid 18] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:10:07.010894 2022] [dbd:crit] [pid 17] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:10:07.013587 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 12:10:07.015038 2022] [dbd:error] [pid 19] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:10:07.014323 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00629: Can't connect to mysql: Can't connect to MySQL server on 'db' (115)
+[Tue Dec 13 12:10:07.017438 2022] [dbd:error] [pid 20] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:10:07.019414 2022] [dbd:crit] [pid 20] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:10:07.018463 2022] [dbd:crit] [pid 19] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:39.144006 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:39.151018 2022] [dbd:error] [pid 21] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:39.154655 2022] [dbd:crit] [pid 21] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:40.093079 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:40.093179 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:40.095571 2022] [dbd:error] [pid 23] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:40.097183 2022] [dbd:crit] [pid 23] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:40.097184 2022] [dbd:error] [pid 22] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:40.099621 2022] [dbd:crit] [pid 22] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:41.102477 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:41.114267 2022] [dbd:error] [pid 24] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:41.126881 2022] [dbd:crit] [pid 24] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:41.114576 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:41.120622 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:41.133737 2022] [dbd:error] [pid 26] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:41.131750 2022] [dbd:error] [pid 27] (20014)Internal error (specific information not available): AH00632: failed to prepare SQL statements: Unknown column 'passwd' in 'field list'
+[Tue Dec 13 12:11:41.132384 2022] [dbd:error] [pid 25] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:41.145135 2022] [dbd:crit] [pid 26] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:41.147404 2022] [dbd:error] [pid 27] (20014)Internal error (specific information not available): AH00633: failed to initialise
+[Tue Dec 13 12:11:41.149747 2022] [dbd:crit] [pid 25] (20014)Internal error (specific information not available): AH00636: child init failed!
+[Tue Dec 13 12:11:41.153645 2022] [dbd:crit] [pid 27] (20014)Internal error (specific information not available): AH00636: child init failed!

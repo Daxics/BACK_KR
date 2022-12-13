@@ -1,6 +1,6 @@
 <?php
 
-use App\Tables\Author;
+use App\Controller\Author;
 
 
 switch ($method){

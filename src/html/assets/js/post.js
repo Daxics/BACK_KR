@@ -24,8 +24,10 @@ $(document).ready(function () {
 
             if ((id_user == post.id_user) && ($("#edit").get(0) === undefined)){
 
-                let btn = $(`<a class="px-3" href="#edit-form" style="width: 100%"><button class="btn btn-primary mt-3 me-3" type="button" id="edit" style="width: 100%">Edit post</button></a>`);
-                $('#post-information').append(btn);
+                let btn = $(`<a class="pe-3" href="#edit-form" style="width: 100%"><button class="btn btn-outline-primary mt-3 me-3" type="button" id="edit" style="width: 100%">Edit post</button></a>`);
+                $('#btn-post').append(btn);
+                let btn_del = $(`<button class="btn btn-outline-danger mt-2" style="width: 100%" data-bs-toggle="modal" data-bs-target="#exampleModal"  type="button" id="delete">Delete post</button>`);
+                $('#btn-post').append(btn_del);
             }
 
             if ($("#edit").get(0) !== undefined){
@@ -135,6 +137,8 @@ $(document).ready(function () {
 
                     $('#edit-post').click(function (e) {
                         e.preventDefault();
+
+
 
                         $(`input`).removeClass('is-invalid');
                         $(`textarea`).removeClass('is-invalid');

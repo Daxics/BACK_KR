@@ -1,6 +1,6 @@
 <?php
 
-use App\Tables\Comment;
+use App\Controller\Comment;
 
 
 switch ($method){

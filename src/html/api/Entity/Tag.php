@@ -1,6 +1,6 @@
 <?php
 
-use App\Tables\Tag;
+use App\Controller\Tag;
 
 
 switch ($method){

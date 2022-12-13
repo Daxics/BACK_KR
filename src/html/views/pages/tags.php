@@ -15,7 +15,6 @@ use App\Services\Page;
 <?php Page::part('navbar');?>
 
 
-<!--    col-sm-2-->
 
 
 <?php Page::part('scripts'); ?>

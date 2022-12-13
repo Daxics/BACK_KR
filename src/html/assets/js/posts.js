@@ -5,7 +5,7 @@ $(function () {
     let author, //получаем поле nickName
         tags, //получаем поле nickName
         characters; //получаем поле e_mail
-    console.log((href.split('?')))
+    // console.log((href.split('?')))
     if ((href.split('?'))[1]) {
         href = href.split('?');
         href = href[1].split('&');

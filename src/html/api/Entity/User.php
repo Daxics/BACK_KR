@@ -1,7 +1,7 @@
 <?php
 
-use App\Tables\User;
-use App\Tables\Registration;
+use App\Controller\User;
+use App\Controller\Registration;
 
 
 switch ($method){

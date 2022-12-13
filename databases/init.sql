@@ -86,11 +86,11 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 CREATE TABLE IF NOT EXISTS `tags` (
     `id_post` INTEGER(40) NOT NULL ,
-    `anime` BIT DEFAULT 0,
-    `biography` BIT DEFAULT 0,
-    `actions` BIT DEFAULT 0,
-    `western` BIT DEFAULT 0,
-    `military` BIT DEFAULT 0,
+    `anime` TINYINT DEFAULT 0,
+    `biography` TINYINT DEFAULT 0,
+    `actions` TINYINT DEFAULT 0,
+    `western` TINYINT DEFAULT 0,
+    `military` TINYINT DEFAULT 0,
     PRIMARY KEY (`id_post`)
 );
 
@@ -108,11 +108,11 @@ CREATE TABLE IF NOT EXISTS `tags_list` (
 
 CREATE TABLE IF NOT EXISTS `characters` (
     `id_post` INTEGER(40) NOT NULL,
-    `Rin` BIT DEFAULT 0,
-    `Ishtar` BIT DEFAULT 0,
-    `Ereshkigal` BIT DEFAULT 0,
-    `Saber` BIT DEFAULT 0,
-    `Illya` BIT DEFAULT 0,
+    `Rin` TINYINT DEFAULT 0,
+    `Ishtar` TINYINT DEFAULT 0,
+    `Ereshkigal` TINYINT DEFAULT 0,
+    `Saber` TINYINT DEFAULT 0,
+    `Illya` TINYINT DEFAULT 0,
     PRIMARY KEY (`id_post`)
 );
 

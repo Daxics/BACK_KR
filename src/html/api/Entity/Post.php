@@ -1,6 +1,6 @@
 <?php
 
-use App\Tables\Post;
+use App\Controller\Post;
 
 
 switch ($method){
