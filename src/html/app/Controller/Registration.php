@@ -124,4 +124,5 @@ class Registration
         }
         echo json_encode($response);
     }
+
 }

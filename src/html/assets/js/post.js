@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('#information').append(uploader);
             let date = $(`<div class="d-flex fs-5 pe-3">Date:<div class="px-2 fs-5">${post.dateTime + ''}</div></div>`);
             $('#information').append(date);
-            let source = $(`<div class="d-flex fs-5 pe-3">Source:<a class="text-decoration-none" href="${post.source + ''}"><div class="px-1 fs-5">${post.source + ''}</div></a></div>`);
+            let source = $(`<div class="d-flex fs-5 pe-3 ">Source:<a class="text-decoration-none text-break" href="${post.source + ''}"><div class="px-1 fs-5">${post.source + ''}</div></a></div>`);
             $('#information').append(source);
             $('#dexc').text(post.disc);
 

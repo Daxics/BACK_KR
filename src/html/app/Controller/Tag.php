@@ -64,4 +64,34 @@ class Tag
         echo json_encode($res);
     }
 
+    public static function patchTag($connection, $data, $id)
+    {
+        if (empty($data['character']) or explode(' ', $data['tag']) > 1) {
+            http_response_code(400);
+            $res = [
+                "status" => false,
+                "message" => 'Some data is not filled or you have entered incorrect values'
+            ];
+        } else {
+            $tag = $data['tag'];
+            $check_character = $connection->query("SELECT * FROM `tags_list` WHERE `tag_title` = '$id'");
+            if (mysqli_num_rows($check_character) == 0) {
+                $res = [
+                    "status" => false,
+                    "type" => 1,
+                    "message" => "Такого тэга не существует",
+                ];
+            } else{
+                $connection->query("UPDATE tagss_list SET tag_title = '$tag' WHERE tag_title = '$id'");
+                $connection->query("ALTER TABLE tags CHANGE $id $tag TINYINT");
+                http_response_code(201);
+                $res = [
+                    "status" => true,
+                    "post_id" => mysqli_insert_id($connection)
+                ];
+            }
+        }
+        echo json_encode($res);
+    }
+
 }

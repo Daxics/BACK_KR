@@ -21,14 +21,16 @@ switch ($method){
                 break;
             case 'register':
                 Registration::add_user($connect, $_POST);
-        }
+            }
         break;
     case 'PATCH':
         if (isset($id)) {
             $data = json_decode(file_get_contents("php://input"), true);
+            User::patch_user($connect, $data, $id);
         }
         break;
     case 'DELETE':
+        User::delete_user($connect, $id);
         break;
 
 }

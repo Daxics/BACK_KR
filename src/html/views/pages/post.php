@@ -31,7 +31,7 @@ use App\Services\Page;
                 <div class="ps-3 fs-4 fw-semibold mt-2" >Tags:</div>
             </div>
         </div>
-        <div class=" d-flex flex-column align-self-start ">
+        <div class=" d-flex flex-column align-self-start " style="min-width: 13rem; max-width: 14rem">
             <div id="information">
                 <div class="ps-3 fs-4 fw-semibold mt-2" >Information:</div>
             </div>

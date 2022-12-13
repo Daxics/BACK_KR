@@ -30,17 +30,17 @@ CREATE TABLE  IF NOT EXISTS `users` (
 --
 -- ---
 
-    CREATE TABLE IF NOT EXISTS `posts` (
-        `id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
-        `id_user` INTEGER(20),
-        `id_author` INTEGER(20),
-        `source` VARCHAR(200),
-        `disc` VARCHAR(1000),
-        `img_name` VARCHAR(20),
-        `img` VARCHAR(200),
-        `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (`id_post`)
-    );
+CREATE TABLE IF NOT EXISTS `posts` (
+    `id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
+    `id_user` INTEGER(20),
+    `id_author` INTEGER(20),
+    `source` VARCHAR(200),
+    `disc` VARCHAR(1000),
+    `img_name` VARCHAR(20),
+    `img` VARCHAR(200),
+    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_post`)
+);
 
 -- ---
 -- Table 'comments'

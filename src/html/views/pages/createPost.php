@@ -91,7 +91,7 @@ if (empty($_SESSION['user'])) {
         </div>
         <div class="d-grid gap-2 p-3">
             <div class="form-text text-danger msg d-none text-center"></div>
-            <button class="btn btn-primary submit btn-lg mx-auto" type="button"  style="width: 15rem;">Button</button>
+            <button class="btn btn-primary submit btn-lg mx-auto" type="button"  style="width: 15rem;">Create Post</button>
         </div>
     </form>
 

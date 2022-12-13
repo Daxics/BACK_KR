@@ -86,7 +86,7 @@ class Post
             $req = ("INSERT INTO posts (id_user, id_author, source, disc, img_name, img)
                     SELECT p.id_user, a.id_author, p.source, p.disc, p.img_name, p.img
                     FROM (
-                        SELECT '$user_id' id_user, '$author_name' author_name, '$src' source, '$disc' disc, '$file_name' img_name, '$file_path' img
+                        SELECT '{$user_id}' id_user, '{$author_name}' author_name, '{$src}' source, '$disc' disc, '{$file_name}' img_name, '{$file_path}' img
                     ) p
                     JOIN authors a ON a.author = p.author_name");
             $connection->query("$req");

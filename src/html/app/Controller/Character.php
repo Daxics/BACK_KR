@@ -63,4 +63,34 @@ class Character
         echo json_encode($res);
     }
 
+    public static function patchCharacter($connection, $data, $id)
+    {
+        if (empty($data['character']) or explode(' ', $data['character']) > 1) {
+            http_response_code(400);
+            $res = [
+                "status" => false,
+                "message" => 'Some data is not filled or you have entered incorrect values'
+            ];
+        } else {
+            $character = $data['character'];
+            $check_character = $connection->query("SELECT * FROM `characters_list` WHERE `character_title` = '$id'");
+            if (mysqli_num_rows($check_character) == 0) {
+                $res = [
+                    "status" => false,
+                    "type" => 1,
+                    "message" => "Такого персонажа не существует",
+                ];
+            } else{
+                $connection->query("UPDATE characters_list SET character_title = '$character' WHERE character_title = '$id'");
+                $connection->query("ALTER TABLE characters CHANGE $id $character TINYINT");
+                http_response_code(201);
+                $res = [
+                    "status" => true,
+                    "post_id" => mysqli_insert_id($connection)
+                ];
+            }
+        }
+        echo json_encode($res);
+    }
+
 }

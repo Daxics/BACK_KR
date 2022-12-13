@@ -6,14 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Services\\Page' => $baseDir . '/app/Services/Page.php',
-    'App\\Services\\Router' => $baseDir . '/app/Services/Router.php',
-    'App\\Tables\\Author' => $baseDir . '/app/Controller/Author.php',
-    'App\\Controller\\Base_API' => $baseDir . '/app/Controller/Vendor.php',
-    'App\\Controller\\Comment' => $baseDir . '/app/Controller/Comment.php',
-    'App\\Controller\\Post' => $baseDir . '/app/Controller/Post.php',
-    'App\\Controller\\Role' => $baseDir . '/app/Controller/Role.php',
-    'App\\Controller\\Tag' => $baseDir . '/app/Controller/Tag.php',
-    'App\\Controller\\User' => $baseDir . '/app/Controller/User.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

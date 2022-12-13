@@ -17,6 +17,7 @@ switch ($method){
     case 'PATCH':
         if (isset($id)) {
             $data = json_decode(file_get_contents("php://input"), true);
+            Character::patchCharacter($connect, $data, $id);
         }
         break;
     case 'DELETE':

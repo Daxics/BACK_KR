@@ -23,10 +23,6 @@ if (isset($params[1])) {
     $id = $params[1];
 }
 
-//Base_API::getAllOut($connect, $_GET['t'] ?? '');
-//Base_API::getCount($connect, $_GET['t'] ?? '');
-
-
 switch ($method_type){
     case "author":
         require_once __DIR__. "/Entity/Author.php";
