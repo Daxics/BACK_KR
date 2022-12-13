@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 	`id_comment` INTEGER(40) AUTO_INCREMENT NOT NULL,
 	`id_post` INTEGER(20),
 	`id_user` INTEGER(20),
-	`text` VARCHAR(200),
+	`text` VARCHAR(500),
 	`dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id_comment`)
 );

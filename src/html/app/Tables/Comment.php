@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Tables;
+session_start();
 
 class Comment
 {
     public static function addComment($connection, $comment)
     {
         if (empty($comment['text'])) {
-            http_response_code(400);
+            http_response_code(200);
             $res = [
+                "type" => 1,
                 "status" => false,
                 "message" => 'Some data is not filled or you have entered incorrect values'
             ];
@@ -19,6 +21,7 @@ class Comment
             $connection->query("INSERT INTO comments (`id_post`,`id_user`,`text`) VALUES ($id_post, $id_user, '$text')");
             http_response_code(201);
             $res = [
+                "type" => 0,
                 "status" => true,
                 "post_id" => mysqli_insert_id($connection)
             ];
@@ -27,9 +30,17 @@ class Comment
     }
 
     public static function getPostsComments($connection, $id){
-        $characters = $connection->query("SELECT * FROM comments WHERE id_post = $id  ORDER BY dateTime DESC");
+        $role = $_SESSION['user']['id_user'] ?? 0;
+
+
+        $comments = $connection->query("SELECT comments.*, users.nickName  FROM comments
+                                            INNER JOIN users
+                                            ON users.id_user = comments.id_user
+                                            WHERE id_post = $id     
+                                            ORDER BY dateTime DESC");
         $postsList = [];
-        while ($post = mysqli_fetch_assoc($characters)) {
+        while ($post = mysqli_fetch_assoc($comments)) {
+            $post['role'] = $role;
             $postsList[] = $post;
         }
         echo json_encode($postsList);
@@ -44,7 +55,7 @@ class Comment
         echo json_encode($postsList);
     }
 
-    public static function delCharacter($connection, $id){
+    public static function delComment($connection, $id){
         $connection->query("DELETE FROM comments WHERE id_comment = $id");
         http_response_code(200);
         $res = [

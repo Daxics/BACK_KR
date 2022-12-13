@@ -131,7 +131,7 @@ $(document).ready(function () {
                     );
 
                     $('[name="src"]').val(post.source);
-                    $('[name="disc"]').val(post.source);
+                    $('[name="disc"]').val(post.disc);
 
                     $('#edit-post').click(function (e) {
                         e.preventDefault();
@@ -208,8 +208,7 @@ $(document).ready(function (){
                 'http://localhost:8000/api/character',
                 function(characters){
                     let i = 0;
-                    // console.log(characters_list[0][0])
-                    // $('#characters').empty();
+
                     characters.forEach(function (character){
                         console.log();
                         if (characters_list[0][character.character_title + ''] == 1){
@@ -231,7 +230,7 @@ $(document).ready(function (){
                 'http://localhost:8000/api/tag',
                 function(tags){
                     let i = 0;
-                    // console.log(tags_list[0][0])
+
 
                     tags.forEach(function (tag){
                         console.log();
@@ -248,6 +247,25 @@ $(document).ready(function (){
 
 })
 
+$('#btn-post').each(function (){
+    let btn = this.lastElementChild;
+    $(btn).click(function () {
+        $('.modal-body').text('Delete a post?');
+        console.log('sex')
+        let id_post = $('.post').attr('id');
+        $('#accept-btn').click(function () {
+            console.log(id_post)
+            $.ajax({
+                url: 'http://localhost:8000/api/post/' + id_post,
+                type: 'DELETE',
+                success() {
+                    document.location.href = '/posts';
+                },
+            });
+            $(this).off('click');
+        })
+    })
+});
 
 
 

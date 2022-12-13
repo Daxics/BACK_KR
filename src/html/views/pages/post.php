@@ -19,7 +19,7 @@ use App\Services\Page;
 
 
 <div class="d-flex p-4 g-4 ">
-    <div class=" d-flex flex-column align-items-stretch mt-2 me-4 border-end" style="min-width: 13rem; max-width: 16rem" id="post-information">
+    <div class=" d-flex flex-column align-items-stretch mt-2 me-4 border-end" style="min-width: 13rem; max-width: 14rem" id="post-information">
         <div class=" d-flex flex-column align-self-start">
             <div id="author">
                 <div class="ps-3 fs-4 fw-semibold mt-2" >Author:</div>
@@ -36,11 +36,15 @@ use App\Services\Page;
                 <div class="ps-3 fs-4 fw-semibold mt-2" >Information:</div>
             </div>
         </div>
-        <?php
-        if (($_SESSION['user']['id_role'] ?? 0 ) == 1){
-            echo '<a class="px-3" href="#edit-form" style="width: 100%"><button class="btn btn-primary mt-3 me-3" type="button" id="edit" style="width: 100%">Edit post</button></a>';
-        }
-        ?>
+        <div class="me-5" id="btn-post">
+            <?php
+            if (($_SESSION['user']['id_role'] ?? 0 ) == 1){
+                echo '<a class="pe-3" href="#edit-form" style="width: 100%"><button class="btn btn-outline-primary mt-3 me-3" type="button" id="edit" style="width: 100%">Edit post</button></a>';
+                echo '<button class="btn btn-outline-danger mt-2" style="width: 100%" data-bs-toggle="modal" data-bs-target="#exampleModal"  type="button" id="delete">Delete post</button>';
+            }
+            ?>
+        </div>
+
 
     </div>
     <div>
@@ -131,32 +135,35 @@ use App\Services\Page;
         <?php
         if(isset($_SESSION['user'])){
             echo '<div class="form-floating mt-4 comm-input" style="max-width: 50rem" id="' . $_SESSION['user']['id_user'] . '">';
-            echo '<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" style="min-height: 100px"></textarea>';
+            echo '<textarea class="form-control" placeholder="Leave a comment here" name="comment" id="floatingTextarea1" style="min-height: 100px"></textarea>';
             echo '<label for="floatingTextarea1" >Comment</label>';
-            echo '<button class="btn btn-primary m-3" type="submit">Publish</button>';
+            echo '<button class="btn btn-primary m-3 " type="submit" id="publish" name="publish">Publish</button>';
+            echo '<button class="btn btn-primary m-3 hide" type="submit" id="comm-edit" name="comm-edit">Edit</button>';
             echo '</div>';
         }
         ?>
         <h3 class="mt-3 mb-4">Comments:</h3>
-        <div>
-            <div class="card mb-3"  style="max-width: 50rem" id="comments">
-                <div class="card-body py-3">
-                    <div class="d-flex justify-content-between" >
-                        <div class="d-flex  align-items-center">
-                            <h5 class="card-title">Card title</h5>
-                            <h7 class="card-title ms-3 ">2022-12-11 22:02:23</h7>
-                        </div>
+        <div id="comments"></div>
 
-                        <div class="d-flex justify-content-end">
-                            <a href="#floatingTextarea1"><button type="button" class="btn btn-sm btn-outline-primary mx-3">Edit</button></a>
-                            <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
-                        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered"">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm the action!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="accept-btn">Delete</button>
+                    </div>
                 </div>
             </div>
-
         </div>
+
 
 </div>
 
@@ -165,6 +172,7 @@ use App\Services\Page;
 <?php Page::part('scripts'); ?>
 <script src="/assets/js/form.js"></script>
 <script src="/assets/js/post.js"></script>
+<script src="/assets/js/comments.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </body>
