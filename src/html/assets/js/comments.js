@@ -7,7 +7,8 @@ async function getComments() {
         function (comments) {
             $("#comments").empty();
             comments.forEach(function (comment) {
-                if (id_user === comment.id_user || comment.role === 1) {
+                console.log(comment.role)
+                if (id_user === comment.id_user || comment.role == 1) {
                     let tags = $(`
                                 <div class="card mb-3 comment"  style="max-width: 50rem" id="${comment.id_comment}">
                                     <div class="card-body py-3">
@@ -55,7 +56,7 @@ async function getComments() {
                     comment_id = $(this).attr('id');
                 $('.modal-body').text('Delete a comment?');
 
-                $(btn_del).click(function (e) {
+                $(btn_del).click(function () {
                     $('#accept-btn').click(function () {
                         console.log(comment_id)
                         $.ajax({

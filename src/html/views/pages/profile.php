@@ -27,10 +27,9 @@ $id = $_GET['id'] ?? NULL;
                             Wrong user
                         </h1>
                     </div>
-                    <div class="p-2 flex-shrink-1">
-                        <button type="button" class="btn btn-outline-primary">Edit Profile</button>
-                        <button type="button" class="btn btn-outline-danger m-3">Delete</button>
-                    </div>
+
+                    <div class="p-2 flex-shrink-1 btn-body"></div>
+
                 </div>
             </div>
 
@@ -38,7 +37,8 @@ $id = $_GET['id'] ?? NULL;
         <div class="nav nav-tabs col-md-9 mx-auto mb-5" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-about-tab"
                     data-bs-toggle="tab"
-                    data-bs-target="#nav-about" type="button" role="tab"
+                    data-bs-target="#nav-about" type="button"
+                    role="tab"
                     aria-controls="nav-about" aria-selected="true">About</button>
             <button class="nav-link" id="nav-uploads-tab"
                     data-bs-toggle="tab"
@@ -137,11 +137,45 @@ $id = $_GET['id'] ?? NULL;
 
 
 
+        <div class="tab-pane third-search fade"
+             id="nav-comments"
+             role="tabpanel"
+             aria-labelledby="nav-comments-tab" tabindex="0">
+            <div class="col-md-9 mx-auto mb-3 container-fluid" >
+                <div id="comments-list" style="min-height:33rem;"></div>
+
+                <nav aria-label="Page navigation" class="d-flex flex-wrap justify-content-center">
+                    <ul class="pagination" id="pagination"></ul>
+                </nav>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm the action!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="accept-btn">Delete</button>
+            </div>
+        </div>
+    </div>
 
 
 <?php Page::part('scripts'); ?>
 <script src="/assets/js/pagination.js"></script>
 <script src="/assets/js/profile.js"></script>
+<!--<script src="/assets/js/profile_comments.js"></script>-->
 </body>
 
 </html>

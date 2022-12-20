@@ -9,7 +9,9 @@ switch ($method){
         if (isset($id)){
             if (isset($_GET['s'])){
                 User::get_users_posts($connect, $id, $_GET['s']);
-            } else {
+            } else if(isset($_GET['cs']))  {
+                User::get_users_comments($connect, $id, $_GET['cs']);
+            } else{
                 User::get_user($connect, $id);
             }
         }
@@ -26,7 +28,7 @@ switch ($method){
     case 'PATCH':
         if (isset($id)) {
             $data = json_decode(file_get_contents("php://input"), true);
-            User::patch_user($connect, $data, $id);
+            User::patch_user($connect, $id, $data);
         }
         break;
     case 'DELETE':

@@ -7,9 +7,8 @@ class Post
 
     public static function getPost($connection, $id)
     {
-        $post = $connection->query("SELECT posts.*, authors.author, users.nickName, authors.count FROM `posts`
+        $post = $connection->query("SELECT posts.*, authors.author, authors.count FROM `posts`
                                     INNER JOIN authors ON authors.id_author = posts.id_author
-                                    INNER JOIN users ON users.id_user = posts.id_user
                                     WHERE `id_post` = '$id'");
         if (mysqli_num_rows($post) === 0) {
             http_response_code(404);

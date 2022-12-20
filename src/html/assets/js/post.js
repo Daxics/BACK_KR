@@ -22,7 +22,12 @@ $(document).ready(function () {
             $('#information').append(source);
             $('#dexc').text(post.disc);
 
-            if ((id_user == post.id_user) && ($("#edit").get(0) === undefined)){
+            if ((+id_user === post.id_user) && ($("#edit").get(0) === undefined)){
+
+                console.log('sex')
+                console.log($("#edit").get(0))
+                console.log(id_user)
+                console.log(post.id_user)
 
                 let btn = $(`<a class="pe-3" href="#edit-form" style="width: 100%"><button class="btn btn-outline-primary mt-3 me-3" type="button" id="edit" style="width: 100%">Edit post</button></a>`);
                 $('#btn-post').append(btn);

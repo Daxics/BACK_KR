@@ -66,7 +66,7 @@ class Registration
                 "status" => false,
                 "type" => 1,
                 "message" => "Такой логин уже существует",
-                "fields" => ['login']
+                "fields" => ['nickName']
             ];
 
             echo json_encode($response);

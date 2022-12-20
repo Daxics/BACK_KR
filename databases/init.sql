@@ -178,12 +178,23 @@ END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE TRIGGER user_comments_DEL AFTER DELETE ON `comments`
+CREATE TRIGGER user_comments_DEL BEFORE DELETE ON `comments`
     FOR EACH ROW BEGIN
     UPDATE `users` SET comments_count = comments_count - 1 WHERE users.id_user = OLD.id_user;
 END $$
 DELIMITER ;
 
+DELIMITER $$
+CREATE TRIGGER user_comments_on_post_DEL BEFORE DELETE ON `posts`
+    FOR EACH ROW BEGIN
+    UPDATE users
+    SET users.comments_count = users.comments_count - (
+        SELECT COUNT(*)
+        FROM comments
+        WHERE comments.id_post = OLD.id_post AND comments.id_user = users.id_user
+        GROUP BY id_user);
+END $$
+DELIMITER ;
 
 -- ---
 -- Foreign Keys
@@ -194,6 +205,7 @@ ALTER TABLE `posts` ADD FOREIGN KEY (id_author) REFERENCES `authors` (`id_author
 ALTER TABLE `comments` ADD FOREIGN KEY (id_post) REFERENCES `posts` (`id_post`) ON DELETE CASCADE;
 ALTER TABLE `comments` ADD FOREIGN KEY (id_user) REFERENCES `users` (`id_user`) ON DELETE SET NULL;
 ALTER TABLE `tags` ADD FOREIGN KEY (id_post) REFERENCES `posts` (id_post) ON DELETE CASCADE;
+ALTER TABLE `characters` ADD FOREIGN KEY (id_post) REFERENCES `posts` (id_post) ON DELETE CASCADE;
 
 
 -- -- ---
@@ -220,6 +232,8 @@ ALTER TABLE `count_posts` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
 
+INSERT INTO `authors` (`author`) VALUES
+    ('Yang Do');
 INSERT INTO `authors` (`author`) VALUES
     ('Yang Do');
 INSERT INTO `roles` (`role`) VALUES
