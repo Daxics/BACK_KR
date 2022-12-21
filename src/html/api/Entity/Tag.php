@@ -8,11 +8,15 @@ switch ($method){
         if(isset($id)){
             Tag::getPostsTags($connect, $id);
         } else {
-            Tag::getTags($connect);
+            if (isset($_GET['s'])) {
+                Tag::getTagLimmit($connect, $_GET['s'] ?? 0);
+            } else {
+                Tag::getTags($connect);
+            }
         }
         break;
     case 'POST':
-        Tag::addTag($connect, $_GET['name'] ?? '');
+        Tag::addTag($connect, $_POST);
         break;
     case 'PATCH':
         if (isset($id)) {

@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Controller;
+session_start();
 
 class Tag
 {
     public static function addTag($connection, $tag)
     {
-        if (empty($tag) or count(explode(' ', $tag)) > 1) {
-            http_response_code(400);
+        if (empty($tag['tag']) or count(explode(' ', $tag['tag'])) > 1) {
+            http_response_code(200);
             $res = [
                 "status" => false,
                 "message" => 'Some data is not filled or you have entered incorrect values'
             ];
         } else {
+            $tag = $tag['tag'];
             $check_tag = $connection->query("SELECT * FROM `tags_list` WHERE `tag_title` = '$tag'");
             if (mysqli_num_rows($check_tag) > 0) {
                 $res = [
@@ -66,8 +68,8 @@ class Tag
 
     public static function patchTag($connection, $data, $id)
     {
-        if (empty($data['character']) or explode(' ', $data['tag']) > 1) {
-            http_response_code(400);
+        if (empty($data['tag']) or count(explode(' ', $data['tag'])) > 1) {
+            http_response_code(200);
             $res = [
                 "status" => false,
                 "message" => 'Some data is not filled or you have entered incorrect values'
@@ -82,7 +84,7 @@ class Tag
                     "message" => "Такого тэга не существует",
                 ];
             } else{
-                $connection->query("UPDATE tagss_list SET tag_title = '$tag' WHERE tag_title = '$id'");
+                $connection->query("UPDATE tags_list SET tag_title = '$tag' WHERE tag_title = '$id'");
                 $connection->query("ALTER TABLE tags CHANGE $id $tag TINYINT");
                 http_response_code(201);
                 $res = [
@@ -92,6 +94,26 @@ class Tag
             }
         }
         echo json_encode($res);
+    }
+
+
+    public static function getTagLimmit($connection, $start)
+    {
+        $tags = $connection->query("SELECT * FROM tags_list ORDER BY tag_title LIMIT {$start},12 ");
+        $tagsList = [];
+        $role = $_SESSION['user']['id_user'] ?? 0;
+
+        while ($character = mysqli_fetch_assoc($tags)) {
+            $character['role'] = $role;
+            $tagsList[] = $character;
+        }
+        echo json_encode($tagsList);
+    }
+
+    public static function getCount($connection)
+    {
+        $characters = $connection->query("SELECT count(*) count FROM tags_list");
+        echo json_encode(mysqli_fetch_assoc($characters));
     }
 
 }

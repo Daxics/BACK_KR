@@ -13,15 +13,15 @@ USE appDB;
 -- ---
 
 CREATE TABLE  IF NOT EXISTS `users` (
-	`id_user` INTEGER(40) AUTO_INCREMENT NOT NULL,
-	`id_role` INTEGER(3) DEFAULT 2,
-	`nickName` VARCHAR(100),
-	`e_mail` VARCHAR(255),
-	`password` VARCHAR(200),
-	`posts_count` INTEGER(40) NOT NULL DEFAULT 0,
-	`comments_count` INTEGER(40) NOT NULL DEFAULT 0,
-    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (`id_user`)
+                                        `id_user` INTEGER(40) AUTO_INCREMENT NOT NULL,
+                                        `id_role` INTEGER(3) DEFAULT 2,
+                                        `nickName` VARCHAR(100),
+                                        `e_mail` VARCHAR(255),
+                                        `password` VARCHAR(200),
+                                        `posts_count` INTEGER(40) NOT NULL DEFAULT 0,
+                                        `comments_count` INTEGER(40) NOT NULL DEFAULT 0,
+                                        `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+                                        PRIMARY KEY (`id_user`)
 );
 
 
@@ -31,15 +31,15 @@ CREATE TABLE  IF NOT EXISTS `users` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `posts` (
-    `id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
-    `id_user` INTEGER(20),
-    `id_author` INTEGER(20),
-    `source` VARCHAR(200),
-    `disc` VARCHAR(1000),
-    `img_name` VARCHAR(20),
-    `img` VARCHAR(200),
-    `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (`id_post`)
+                                       `id_post` INTEGER(20) AUTO_INCREMENT NOT NULL,
+                                       `id_user` INTEGER(20),
+                                       `id_author` INTEGER(20),
+                                       `source` VARCHAR(200),
+                                       `disc` VARCHAR(1000),
+                                       `img_name` VARCHAR(20),
+                                       `img` VARCHAR(200),
+                                       `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+                                       PRIMARY KEY (`id_post`)
 );
 
 -- ---
@@ -48,12 +48,12 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `comments` (
-	`id_comment` INTEGER(40) AUTO_INCREMENT NOT NULL,
-	`id_post` INTEGER(20),
-	`id_user` INTEGER(20),
-	`text` VARCHAR(500),
-	`dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (`id_comment`)
+                                          `id_comment` INTEGER(40) AUTO_INCREMENT NOT NULL,
+                                          `id_post` INTEGER(20),
+                                          `id_user` INTEGER(20),
+                                          `text` VARCHAR(500),
+                                          `dateTime` DATETIME DEFAULT CURRENT_TIMESTAMP,
+                                          PRIMARY KEY (`id_comment`)
 );
 
 -- ---
@@ -62,10 +62,10 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `authors` (
-	`id_author` INTEGER(20) AUTO_INCREMENT NOT NULL,
-	`author` VARCHAR(20),
-	`count` VARCHAR(20) DEFAULT 0,
-	PRIMARY KEY (`id_author`)
+                                         `id_author` INTEGER(20) AUTO_INCREMENT NOT NULL,
+                                         `author` VARCHAR(20),
+                                         `count` VARCHAR(20) DEFAULT 0,
+                                         PRIMARY KEY (`id_author`)
 );
 
 -- ---
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `authors` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `roles` (
-	`id_role` INTEGER(20) AUTO_INCREMENT NOT NULL,
-	`role` VARCHAR(10),
-	PRIMARY KEY (`id_role`)
+                                       `id_role` INTEGER(20) AUTO_INCREMENT NOT NULL,
+                                       `role` VARCHAR(10),
+                                       PRIMARY KEY (`id_role`)
 );
 
 -- ---
@@ -85,19 +85,18 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `tags` (
-    `id_post` INTEGER(40) NOT NULL ,
-    `anime` TINYINT DEFAULT 0,
-    `biography` TINYINT DEFAULT 0,
-    `actions` TINYINT DEFAULT 0,
-    `western` TINYINT DEFAULT 0,
-    `military` TINYINT DEFAULT 0,
-    PRIMARY KEY (`id_post`)
+                                      `id_post` INTEGER(40) NOT NULL ,
+                                      `anime` TINYINT DEFAULT 0,
+                                      `biography` TINYINT DEFAULT 0,
+                                      `actions` TINYINT DEFAULT 0,
+                                      `western` TINYINT DEFAULT 0,
+                                      `military` TINYINT DEFAULT 0,
+                                      PRIMARY KEY (`id_post`)
 );
 
 CREATE TABLE IF NOT EXISTS `tags_list` (
-    `tag_title` VARCHAR(100) NOT NULL,
-    `count` INTEGER(40) NOT NULL DEFAULT 0,
-    PRIMARY KEY (`tag_title`)
+                                           `tag_title` VARCHAR(100) NOT NULL,
+                                           PRIMARY KEY (`tag_title`)
 );
 
 
@@ -107,19 +106,18 @@ CREATE TABLE IF NOT EXISTS `tags_list` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `characters` (
-    `id_post` INTEGER(40) NOT NULL,
-    `Rin` TINYINT DEFAULT 0,
-    `Ishtar` TINYINT DEFAULT 0,
-    `Ereshkigal` TINYINT DEFAULT 0,
-    `Saber` TINYINT DEFAULT 0,
-    `Illya` TINYINT DEFAULT 0,
-    PRIMARY KEY (`id_post`)
+                                            `id_post` INTEGER(40) NOT NULL,
+                                            `Rin` TINYINT DEFAULT 0,
+                                            `Ishtar` TINYINT DEFAULT 0,
+                                            `Ereshkigal` TINYINT DEFAULT 0,
+                                            `Saber` TINYINT DEFAULT 0,
+                                            `Illya` TINYINT DEFAULT 0,
+                                            PRIMARY KEY (`id_post`)
 );
 
 CREATE TABLE IF NOT EXISTS `characters_list` (
-    `character_title` VARCHAR(100) NOT NULL,
-    `count` INTEGER(40) NOT NULL DEFAULT 0,
-    PRIMARY KEY (`character_title`)
+                                                 `character_title` VARCHAR(100) NOT NULL,
+                                                 PRIMARY KEY (`character_title`)
 );
 
 
@@ -129,9 +127,9 @@ CREATE TABLE IF NOT EXISTS `characters_list` (
 -- ---
 
 CREATE TABLE IF NOT EXISTS `count_posts` (
-    `id` INTEGER(1) NOT NULL AUTO_INCREMENT,
-    `count` INTEGER(10) NOT NULL DEFAULT 0,
-    PRIMARY KEY (`id`)
+                                             `id` INTEGER(1) NOT NULL AUTO_INCREMENT,
+                                             `count` INTEGER(10) NOT NULL DEFAULT 0,
+                                             PRIMARY KEY (`id`)
 );
 
 
@@ -232,41 +230,53 @@ ALTER TABLE `count_posts` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
 
-INSERT INTO `authors` (`author`) VALUES
-    ('Yang Do');
-INSERT INTO `authors` (`author`) VALUES
-    ('Yang Do');
 INSERT INTO `roles` (`role`) VALUES
     ('Admin');
 INSERT INTO `roles` (`role`) VALUES
     ('RegUser');
 
+
+
+INSERT INTO `authors` (`author`) VALUES
+    ('Yang Do');
+INSERT INTO `authors` (`author`) VALUES
+    ('Roropull');
+INSERT INTO `authors` (`author`) VALUES
+    ('WaterRing');
+INSERT INTO `authors` (`author`) VALUES
+    ('Squeezable');
+INSERT INTO `authors` (`author`) VALUES
+    ('Kamuo');
+
+
 INSERT INTO `count_posts` (id) VALUE
     (1);
 
-INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('anime', 0);
-INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('biography', 0);
-INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('actions', 0);
-INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('western', 0);
-INSERT INTO `tags_list` (tag_title, count) VALUE
-    ('military', 0);
+INSERT INTO `tags_list` (tag_title) VALUE
+    ('anime');
+INSERT INTO `tags_list` (tag_title) VALUE
+    ('biography');
+INSERT INTO `tags_list` (tag_title) VALUE
+    ('actions');
+INSERT INTO `tags_list` (tag_title) VALUE
+    ('western');
+INSERT INTO `tags_list` (tag_title) VALUE
+    ('military');
 
-INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Rin',0);
-INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Ishtar',0);
-INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Ereshkigal',0);
-INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Saber',0);
-INSERT INTO `characters_list` (character_title,count) VALUES
-    ('Illya',0);
+INSERT INTO `characters_list` (character_title) VALUES
+    ('Rin');
+INSERT INTO `characters_list` (character_title) VALUES
+    ('Ishtar');
+INSERT INTO `characters_list` (character_title) VALUES
+    ('Ereshkigal');
+INSERT INTO `characters_list` (character_title) VALUES
+    ('Saber');
+INSERT INTO `characters_list` (character_title) VALUES
+    ('Illya');
 
 INSERT INTO `users` (`id_role`,`nickName`,`e_mail`,`password`) VALUES
     (1,'User','user@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');
-
-
+INSERT INTO `users` (`id_role`,`nickName`,`e_mail`,`password`) VALUES
+    (2,'User1','user1@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `users` (`id_role`,`nickName`,`e_mail`,`password`) VALUES
+    (2,'User2','user2@mail.cum','81dc9bdb52d04dc20036dbd8313ed055');

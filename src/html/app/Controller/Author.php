@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Controller;
-
+session_start();
 
 class Author
 {
     public static function getAuthorLimmit($connection, $start){
-        $authors = $connection->query("SELECT * FROM authors LIMIT {$start},12");
+        $authors = $connection->query("SELECT * FROM authors ORDER BY author LIMIT {$start},12 ");
         $authorsList = [];
+        $role = $_SESSION['user']['id_user'] ?? 0;
+
         while ($author = mysqli_fetch_assoc($authors)) {
+            $author['role'] = $role;
             $authorsList[] = $author;
         }
         echo json_encode($authorsList);
@@ -51,7 +54,7 @@ class Author
             $author = $author['author'];
             $check_author = $connection->query("SELECT * FROM authors WHERE `author` = '$author'");
             if (mysqli_num_rows($check_author) > 0) {
-                http_response_code(400);
+                http_response_code(200);
                 $res = [
                     "status" => false,
                     "type" => 1,
@@ -71,7 +74,7 @@ class Author
 
     public static function updateAuthor($connection, $id, $data){
 
-        if(empty($data['name'])){
+        if(empty($data['author'])){
             http_response_code(400);
             $res = [
                 "status" => false,
@@ -82,7 +85,7 @@ class Author
             return;
         }
 
-        $author_name = $data['name'];
+        $author_name = $data['author'];
         $connection->query("UPDATE authors SET author = '$author_name'WHERE id_author = '$id'");
 
         http_response_code(200);
@@ -106,5 +109,12 @@ class Author
             "orderID" => $id
         ];
         echo json_encode($res);
+    }
+
+    public static function getCount($connection)
+    {
+        $authors = $connection->query("SELECT count(*) count FROM authors");
+        $author = mysqli_fetch_assoc($authors);
+        echo json_encode($author);
     }
 }

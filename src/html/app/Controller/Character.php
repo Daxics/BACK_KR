@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Controller;
+session_start();
 
 class Character
 {
     public static function addCharacter($connection, $character)
     {
-        if (empty($character) or count(explode(' ', $character)) > 1) {
+        if (empty($character['character']) or count(explode(' ', $character['character'])) > 1) {
             http_response_code(400);
             $res = [
                 "status" => false,
                 "message" => 'Some data is not filled or you have entered incorrect values'
             ];
         } else {
+            $character = $character['character'];
             $check_character = $connection->query("SELECT * FROM `characters_list` WHERE `character_title` = '$character'");
             if (mysqli_num_rows($check_character) > 0) {
                 $res = [
@@ -65,8 +67,8 @@ class Character
 
     public static function patchCharacter($connection, $data, $id)
     {
-        if (empty($data['character']) or explode(' ', $data['character']) > 1) {
-            http_response_code(400);
+        if (empty($data['character']) or count(explode(' ', $data['character'])) > 1) {
+            http_response_code(200);
             $res = [
                 "status" => false,
                 "message" => 'Some data is not filled or you have entered incorrect values'
@@ -91,6 +93,25 @@ class Character
             }
         }
         echo json_encode($res);
+    }
+
+    public static function getCharacterLimmit($connection, $start)
+    {
+        $characters = $connection->query("SELECT * FROM characters_list ORDER BY character_title LIMIT {$start},12 ");
+        $charactersList = [];
+        $role = $_SESSION['user']['id_user'] ?? 0;
+
+        while ($character = mysqli_fetch_assoc($characters)) {
+            $character['role'] = $role;
+            $charactersList[] = $character;
+        }
+        echo json_encode($charactersList);
+    }
+
+    public static function getCount($connection)
+    {
+        $characters = $connection->query("SELECT count(*) count FROM characters_list");
+        echo json_encode(mysqli_fetch_assoc($characters));
     }
 
 }

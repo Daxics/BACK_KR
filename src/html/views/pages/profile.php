@@ -126,12 +126,12 @@ $id = $_GET['id'] ?? NULL;
              role="tabpanel"
              aria-labelledby="nav-uploads-tab" tabindex="0">
             <div class="col-md-9 mx-auto mb-3 container-fluid" >
-                <div class="d-flex flex-wrap posts-list justify-content-center"
-                     style="min-height:33rem;" id="posts-list"></div>
+            <div class="d-flex flex-wrap posts-list justify-content-center"
+                 style="min-height:33rem;" id="posts-list"></div>
 
-                <nav aria-label="Page navigation" class="d-flex flex-wrap justify-content-center">
-                    <ul class="pagination" id="pagination"></ul>
-                </nav>
+            <nav aria-label="Page navigation" class="d-flex flex-wrap justify-content-center">
+                <ul class="pagination" id="pagination"></ul>
+            </nav>
             </div>
         </div>
 

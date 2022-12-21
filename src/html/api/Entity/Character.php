@@ -8,11 +8,15 @@ switch ($method){
         if(isset($id)){
             Character::getPostsCharacters($connect, $id);
         } else {
-            Character::getCharacters($connect);
+            if (isset($_GET['s'])) {
+                Character::getCharacterLimmit($connect, $_GET['s'] ?? 0);
+            } else {
+                Character::getCharacters($connect);
+            }
         }
         break;
     case 'POST':
-        Character::addCharacter($connect, $_GET['name'] ?? '');
+        Character::addCharacter($connect, $_POST);
         break;
     case 'PATCH':
         if (isset($id)) {

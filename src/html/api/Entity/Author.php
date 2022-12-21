@@ -2,14 +2,13 @@
 
 use App\Controller\Author;
 
-
 switch ($method){
     case 'GET':
         if(isset($id)){
             Author::getAuthor($connect, $id);
         } else {
             if (isset($_GET['s'])) {
-                Author::getAuthorLimmit($connect, $_GET['s'] ?? '');
+                Author::getAuthorLimmit($connect, $_GET['s'] ?? 0);
             } else {
                 Author::getAuthors($connect);
             }
